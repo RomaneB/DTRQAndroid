@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/drivingLessonListFragment">
+
+    <fragment
+        android:id="@+id/drivingLessonListFragment"
+        android:name="org.diiage.dtrqandroid.data.list.DrivingLessonListFragment"
+        android:label="driving_lesson_list_fragment"
+        tools:layout="@layout/driving_lesson_list_fragment" />
+</navigation>
