@@ -11,5 +11,5 @@
         android:layout_height="319dp"
         tools:listitem="@layout/driving_lesson_item" />
 
-   
+
 </LinearLayout>
