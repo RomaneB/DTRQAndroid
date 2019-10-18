@@ -13,6 +13,7 @@ import android.widget.TextView;
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
 import org.diiage.dtrqandroid.data.db.viewmodel.UserViewModel;
+import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 
 import javax.inject.Inject;
 
@@ -27,6 +28,7 @@ public class LoginPage extends Fragment {
     ViewModelProvider.Factory viewModelFactory;
 
     private UserViewModel userViewModel;
+    UserSessionManager session;
 
 
     public LoginPage() {
@@ -36,6 +38,7 @@ public class LoginPage extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         ((RoomApplication) getActivity().getApplication())
                 .getApplicationComponent()
                 .inject(this);
@@ -58,26 +61,33 @@ public class LoginPage extends Fragment {
     public void onViewCreated (View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
         userViewModel = ViewModelProviders.of(this, viewModelFactory).get(UserViewModel.class);
+        session = new UserSessionManager(getContext());
         Fragment currentFragment = this;
 
-        view.findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText usernameEditText = (EditText) view.findViewById(R.id.editUsername);
-                String username = usernameEditText.getText().toString();
-                EditText passwordEditText = view.findViewById(R.id.editPassword);
-                String password = passwordEditText.getText().toString();
-                userViewModel.getUserByUsername(username,password).observe(currentFragment, user -> {
-                    if (user != null) {
-                       Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
-                    } else {
-                        TextView txtError = (TextView)view.findViewById(R.id.txtError);
-                        txtError.setText("Nom d'utlisateur ou mot de passe incorrect");
-                    }
-                });
+        if(!session.isUserLoggedIn()) {
+            view.findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    EditText usernameEditText = (EditText) view.findViewById(R.id.editUsername);
+                    String username = usernameEditText.getText().toString();
+                    EditText passwordEditText = view.findViewById(R.id.editPassword);
+                    String password = passwordEditText.getText().toString();
+                    userViewModel.getUserByUsername(username, password).observe(currentFragment, user -> {
+                        if (user != null) {
+                            session.createUserLoginSession(username);
+                            getActivity().setTitle("DTRQAndroid - Bienvenue " + username);
+                            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
+                        } else {
+                            TextView txtError = (TextView) view.findViewById(R.id.txtError);
+                            txtError.setText("Nom d'utlisateur ou mot de passe incorrect");
+                        }
+                    });
 
-            }
-        });
+                }
+            });
+        }else{
+            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
+        }
 
 
     }

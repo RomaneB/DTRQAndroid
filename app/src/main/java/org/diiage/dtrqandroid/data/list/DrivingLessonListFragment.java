@@ -11,7 +11,9 @@ import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
 import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
+import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -30,6 +32,8 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DrivingLessonListFragment extends Fragment {
     @Inject
     ViewModelProvider.Factory viewModelFactory;
+
+    UserSessionManager session;
     
     private LayoutInflater layoutInflater;
     private DrivingLessonViewModel drivingLessonViewModel;
@@ -46,6 +50,8 @@ public class DrivingLessonListFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        session = new UserSessionManager(getContext());
+
         ((RoomApplication) getActivity().getApplication())
                 .getApplicationComponent()
                 .inject(this);
@@ -69,6 +75,14 @@ public class DrivingLessonListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.driving_lesson_list_fragment, container, false);
+
+        view.findViewById(R.id.btnLogout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                session.logoutUser(getActivity());
+            }
+        });
+
         layoutInflater = getActivity().getLayoutInflater();
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);

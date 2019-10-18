@@ -33,7 +33,7 @@ public class DrivingLessonAdapter extends RecyclerView.Adapter<DrivingLessonAdap
     @Override
     public void onBindViewHolder(@NonNull DrivingLessonHolder holder, int position) {
         DrivingLesson currentDrivingLesson = drivingLessonList.get(position);
-        holder.textViewDate.setText(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(currentDrivingLesson.getDate())); // simpledate format
+        holder.textViewDate.setText(holder.textViewDate.getText() + new SimpleDateFormat("dd MMMM yyyy 'à' hh'h'mm").format(currentDrivingLesson.getDate())); // simpledate format
         holder.textViewText.setText(currentDrivingLesson.getText());
     }
 
