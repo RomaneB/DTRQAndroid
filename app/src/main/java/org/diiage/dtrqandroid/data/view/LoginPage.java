@@ -74,7 +74,7 @@ public class LoginPage extends Fragment {
                     String password = passwordEditText.getText().toString();
                     userViewModel.getUserByUsername(username, password).observe(currentFragment, user -> {
                         if (user != null) {
-                            session.createUserLoginSession(username);
+                            session.createUserLoginSession(username, Long.toString(user.getId()));
                             getActivity().setTitle("DTRQAndroid - Bienvenue " + username);
                             Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
                         } else {

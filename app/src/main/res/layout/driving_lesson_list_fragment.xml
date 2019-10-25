@@ -11,6 +11,11 @@
         android:layout_height="443dp"
         tools:listitem="@layout/driving_lesson_item" />
 
+    <Button
+        android:id="@+id/btnGoToMyDriving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aller vers mes leçons" />
 
     <Button
         android:id="@+id/btnLogout"

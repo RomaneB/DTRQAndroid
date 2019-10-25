@@ -14,6 +14,14 @@ public interface DrivingLessonDao {
     @Query("SELECT * FROM drivingLesson")
     LiveData<List<DrivingLesson>> getAllDrivingLessons();
 
+    @Query("SELECT * FROM drivingLesson WHERE userId = 0 AND date NOT IN (SELECT date FROM drivingLesson WHERE userId = :idUser)")
+    LiveData<List<DrivingLesson>> getAvailableDrivingLessons(Long idUser);
+
     @Insert
     void insert(DrivingLesson drivingLesson);
+
+    @Query("SELECT * FROM drivingLesson WHERE userId = :idUser")
+    LiveData<List<DrivingLesson>> getMyDrivingLessons(long idUser);
+
+
 }

@@ -1,48 +1,42 @@
 package org.diiage.dtrqandroid.data.list;
 
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
-import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 
 import java.util.HashMap;
-import java.util.List;
 
 import javax.inject.Inject;
 
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class DrivingLessonListFragment extends Fragment {
+public class MyDrivingLessonListFragment extends Fragment {
     @Inject
     ViewModelProvider.Factory viewModelFactory;
 
     UserSessionManager session;
-    private Long idUser;
+
     private LayoutInflater layoutInflater;
-    private DrivingLessonViewModel drivingLessonViewModel;
+    private DrivingLessonViewModel myDrivingLessonViewModel;
     private RecyclerView recyclerView;
-    private DrivingLessonAdapter adapter;
+    private MyDrivingLessonAdapter adapter;
+
     private RecyclerView.LayoutManager layoutManager;
-    private List<DrivingLesson> listOfData;
-    public DrivingLessonListFragment() {
+
+    private Long idUser;
+
+    public MyDrivingLessonListFragment() {
         // Required empty public constructor
     }
 
@@ -52,9 +46,8 @@ public class DrivingLessonListFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         session = new UserSessionManager(getContext());
-
-        // get id
         idUser = session.getUserId();
+
         ((RoomApplication) getActivity().getApplication())
                 .getApplicationComponent()
                 .inject(this);
@@ -63,53 +56,44 @@ public class DrivingLessonListFragment extends Fragment {
 
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        drivingLessonViewModel = ViewModelProviders.of(this, viewModelFactory).get(DrivingLessonViewModel.class);
-        drivingLessonViewModel.getAvailableDrivingLessons(idUser).observe(this, sessions -> {
-                if(sessions != null && adapter != null){
-                    adapter.setDrivingLessons(sessions);
+        myDrivingLessonViewModel = ViewModelProviders.of(this, viewModelFactory).get(DrivingLessonViewModel.class);
+
+
+
+
+        myDrivingLessonViewModel.getMyDrivingLessons(idUser).observe(this, sessions -> {
+                    if(sessions != null && adapter != null){
+                        adapter.setMyDrivingLessons(sessions);
+                    }
                 }
-        }
         );
+
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.driving_lesson_list_fragment, container, false);
+        View view = inflater.inflate(R.layout.my_driving_lesson_list_fragment, container, false);
 
-        view.findViewById(R.id.btnLogout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                session.logoutUser(getActivity());
-            }
-        });
-
-        view.findViewById(R.id.btnGoToMyDriving).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.action_drivingLessonListFragment_to_myDrivingLessonListFragment);
-            }
-        });
 
         layoutInflater = getActivity().getLayoutInflater();
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) view.findViewById(R.id.myDrivingLessonRecyclerView);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
 
-        adapter = new DrivingLessonAdapter();
+        adapter = new MyDrivingLessonAdapter();
 
         recyclerView.setAdapter(adapter);
 
-        if(drivingLessonViewModel != null && drivingLessonViewModel.getAvailableDrivingLessons(idUser).getValue() != null ){
-            adapter.setDrivingLessons(drivingLessonViewModel.getAvailableDrivingLessons(idUser).getValue());
+        if(myDrivingLessonViewModel != null && myDrivingLessonViewModel.getMyDrivingLessons(idUser).getValue() != null ){
+            adapter.setMyDrivingLessons(myDrivingLessonViewModel.getMyDrivingLessons(idUser).getValue());
         }
         return view;
 
     }
+
 
 
 

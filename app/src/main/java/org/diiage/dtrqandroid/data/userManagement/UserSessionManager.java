@@ -24,8 +24,8 @@ public class UserSessionManager {
     // User name (make variable public to access from outside)
     public static final String KEY_USERNAME = "username";
 
-    // Email address (make variable public to access from outside)
-    public static final String KEY_PASSWORD = "password";
+    // ID
+    public static final String KEY_ID = "id";
 
 
     public UserSessionManager(Context context){
@@ -34,12 +34,14 @@ public class UserSessionManager {
         editor = pref.edit();
     }
 
-    public void createUserLoginSession(String name){
+    public void createUserLoginSession(String name, String id){
         // Storing login value as TRUE
         editor.putBoolean(IS_USER_LOGIN, true);
 
         // Storing name in pref
         editor.putString(KEY_USERNAME, name);
+
+        editor.putString(KEY_ID, id);
 
 
         // commit changes
@@ -80,6 +82,8 @@ public class UserSessionManager {
         // user name
         user.put(KEY_USERNAME, pref.getString(KEY_USERNAME, null));
 
+        user.put(KEY_ID, pref.getString(KEY_ID, null));
+
 
         // return user
         return user;
@@ -108,5 +112,12 @@ public class UserSessionManager {
 
 
         activity.finish();
+    }
+
+    public Long getUserId(){
+
+        HashMap<String, String> user = getUserDetails();
+        Long idUser = Long.parseLong(user.get(UserSessionManager.KEY_ID));
+        return idUser;
     }
 }

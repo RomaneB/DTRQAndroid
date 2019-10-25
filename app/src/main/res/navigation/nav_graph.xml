@@ -9,7 +9,11 @@
         android:id="@+id/drivingLessonListFragment"
         android:name="org.diiage.dtrqandroid.data.list.DrivingLessonListFragment"
         android:label="driving_lesson_list_fragment"
-        tools:layout="@layout/driving_lesson_list_fragment" />
+        tools:layout="@layout/driving_lesson_list_fragment" >
+        <action
+            android:id="@+id/action_drivingLessonListFragment_to_myDrivingLessonListFragment"
+            app:destination="@+id/myDrivingLessonListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginPage"
         android:name="org.diiage.dtrqandroid.data.view.LoginPage"
@@ -19,4 +23,8 @@
             android:id="@+id/action_loginPage_to_drivingLessonListFragment"
             app:destination="@id/drivingLessonListFragment"/>
     </fragment>
+    <fragment
+        android:id="@+id/myDrivingLessonListFragment"
+        android:name="org.diiage.dtrqandroid.data.list.MyDrivingLessonListFragment"
+        android:label="MyDrivingLessonListFragment" />
 </navigation>

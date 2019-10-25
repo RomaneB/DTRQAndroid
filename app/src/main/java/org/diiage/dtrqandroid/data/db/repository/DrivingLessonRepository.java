@@ -21,6 +21,15 @@ public class DrivingLessonRepository {
         return drivingLessonDao.getAllDrivingLessons();
     }
 
+    public LiveData<List<DrivingLesson>> getAvailableDrivingLessons(Long idUser) {
+        return drivingLessonDao.getAvailableDrivingLessons(idUser);
+    }
+
+    public LiveData<List<DrivingLesson>> getMyDrivingLessons(long idUser) {
+        return drivingLessonDao.getMyDrivingLessons(idUser);
+    }
+
+
     public void insert(DrivingLesson drivingLesson) {
         drivingLessonDao.insert(drivingLesson);
     }
