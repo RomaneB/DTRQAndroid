@@ -1,4 +1,4 @@
-package org.diiage.dtrqandroid.drivingLessons.ViewPager;
+package org.diiage.dtrqandroid.drivingLessons.viewPager;
 
 import android.content.Context;
 

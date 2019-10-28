@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 
 import org.diiage.dtrqandroid.R;
-import org.diiage.dtrqandroid.drivingLessons.ViewPager.DrivingLessonsTabsFragmentPagerAdapter;
+import org.diiage.dtrqandroid.drivingLessons.viewPager.DrivingLessonsTabsFragmentPagerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.

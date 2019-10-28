@@ -15,7 +15,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<MyDrivingLessonAdapter.MyDrivingLessonHolder> {
+public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<RecyclerViewMyDrivingLessonAdapter.MyDrivingLessonHolder> {
     private List<DrivingLesson> myDrivingLessonList = new ArrayList<>();
     public RecyclerViewMyDrivingLessonAdapter(){
     }
@@ -23,7 +23,7 @@ public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<MyD
     @NonNull
     @Override
     public MyDrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_driving_lesson_item ,parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_my_driving_lesson_item,parent, false);
         return new MyDrivingLessonHolder(itemView);
     }
 
