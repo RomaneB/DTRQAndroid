@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btn_driving_lessons"
+        android:title="Leçons de conduite" />
+    <item
+        android:id="@+id/btn_training_sessions"
+        android:title="Sessions d'entraînement" />
+</menu>

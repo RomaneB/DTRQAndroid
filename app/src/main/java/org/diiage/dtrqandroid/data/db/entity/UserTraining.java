@@ -9,52 +9,52 @@ import androidx.room.PrimaryKey;
 
 @Entity(
         tableName = "User_Training",
-        indices = {@Index(value = {"idUser", "idTraining"},unique = true)},
-        foreignKeys = { @ForeignKey(entity = User.class, parentColumns = "idUser", childColumns ="idUser")}
+        indices = {@Index(value = {"userId", "trainingId"},unique = true)},
+        foreignKeys = { @ForeignKey(entity = User.class, parentColumns = "userId", childColumns ="userId")}
 )
 public class UserTraining {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "idUserTraining")
-    public long idUserTraining;
+    @ColumnInfo(name = "userTrainingId")
+    public long userTrainingId;
 
-    @ColumnInfo(name = "idUser")
-    public long idUser;
+    @ColumnInfo(name = "userId")
+    public long userId;
 
-    @ColumnInfo(name = "idTraining")
-    public long idTraining;
+    @ColumnInfo(name = "trainingId")
+    public long trainingId;
 
     @ColumnInfo(name = "score")
     public int score;
 
-    public UserTraining(@NonNull long idUserTraining, @NonNull long idUser, @NonNull long idTraining, int score){
-        this.idTraining = idTraining;
-        this.idUser = idUser;
-        this.idUserTraining = idUserTraining;
+    public UserTraining(@NonNull long userTrainingId, @NonNull long userId, @NonNull long trainingId, int score){
+        this.trainingId = trainingId;
+        this.userId = userId;
+        this.userTrainingId = userTrainingId;
         this.score = score;
     }
 
-    public long getIdTraining() {
-        return idTraining;
+    public long getTrainingId() {
+        return trainingId;
     }
 
-    public void setIdTraining(long idTraining) {
-        this.idTraining = idTraining;
+    public void setTrainingId(long trainingId) {
+        this.trainingId = trainingId;
     }
 
-    public long getIdUser() {
-        return idUser;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setIdUser(long idUser) {
-        this.idUser = idUser;
+    public void setUserID(long userId) {
+        this.userId = userId;
     }
 
-    public long getIdUserTraining() {
-        return idUserTraining;
+    public long getUserTrainingId() {
+        return userTrainingId;
     }
 
-    public void setIdUserTraining(long idUserTraining) {
-        this.idUserTraining = idUserTraining;
+    public void setUserTrainingId(long idUserTraining) {
+        this.userTrainingId = userTrainingId;
     }
 
     public long getScore() {

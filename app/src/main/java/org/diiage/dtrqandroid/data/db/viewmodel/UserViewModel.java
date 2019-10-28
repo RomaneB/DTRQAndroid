@@ -20,6 +20,7 @@ public class UserViewModel extends ViewModel {
     }
 
     public LiveData<List<User>> getAllUsers() { return userRepository.getAllUsers();}
+    public LiveData<User> getUserByUsername(String username, String password) { return userRepository.getUserByUsername(username, password);}
 
     public void insert(User user) { userRepository.insert(user);}
 }

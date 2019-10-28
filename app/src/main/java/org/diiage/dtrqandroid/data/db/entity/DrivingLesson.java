@@ -12,8 +12,8 @@ import androidx.room.TypeConverters;
 public class DrivingLesson {
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "idDrivingLesson")
-    public long idDrivingLesson;
+    @ColumnInfo(name = "drivingLessonId")
+    public long drivingLessonId;
 
     @ColumnInfo(name = "date")
     @TypeConverters({DateTypeConverter.class})
@@ -28,21 +28,21 @@ public class DrivingLesson {
     @ColumnInfo(name = "userId")
     public long userId;
 
-    public DrivingLesson(@NonNull long idDrivingLesson, @NonNull Date  date, String text, long instructorId, long userId)
+    public DrivingLesson(@NonNull long drivingLessonId, @NonNull Date  date, String text, long instructorId, long userId)
     {
-        this.idDrivingLesson = idDrivingLesson;
+        this.drivingLessonId = drivingLessonId;
         this.date = date;
         this.text = text;
         this.instructorId = instructorId;
         this.userId = userId;
     }
 
-    public long getidDrivingLesson() {
-        return idDrivingLesson;
+    public long getDrivingLessonId() {
+        return drivingLessonId;
     }
 
-    public void setidDrivingLesson(long idDrivingLesson) {
-        this.idDrivingLesson = idDrivingLesson;
+    public void setDrivingLessonId(long drivingLessonId) {
+        this.drivingLessonId = drivingLessonId;
     }
 
     public Date getDate() {

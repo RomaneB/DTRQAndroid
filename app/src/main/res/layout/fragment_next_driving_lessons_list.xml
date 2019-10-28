@@ -8,12 +8,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="319dp"
-        tools:listitem="@layout/driving_lesson_item" />
+        android:layout_height="443dp"
+        tools:listitem="@layout/fragment_driving_lesson_item" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Se déconnecter" />
+
+
 </LinearLayout>

@@ -18,6 +18,12 @@ public class DrivingLessonViewModel extends ViewModel {
     }
 
     public LiveData<List<DrivingLesson>> getAllDrivingLessons() { return drivingLessonRepository.getAllDrivingLessons();}
-
+    public LiveData<List<DrivingLesson>> getAvailableDrivingLessons(Long userId) { return drivingLessonRepository.getAvailableDrivingLessons(userId);}
+    public LiveData<List<DrivingLesson>> getMyDrivingLessons(long userId) {
+        return drivingLessonRepository.getMyDrivingLessons(userId);
+    }
+    public void inscription(Long userId, Long drivingLessonId) {
+        drivingLessonRepository.inscription(userId, drivingLessonId);
+    }
     public void insert(DrivingLesson drivingLesson) { drivingLessonRepository.insert(drivingLesson);}
 }

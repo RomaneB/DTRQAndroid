@@ -1,30 +1,54 @@
 package org.diiage.dtrqandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.navigation.Navigation;
 
 import android.os.Bundle;
-import android.widget.Toast;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
-import org.diiage.dtrqandroid.data.db.repository.UserRepository;
-import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
-import org.diiage.dtrqandroid.data.list.DrivingLessonAdapter;
+import org.diiage.dtrqandroid.data.db.viewmodel.UserViewModel;
+import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 
-import java.util.List;
-
-import javax.inject.Inject;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
+    private UserViewModel userViewModel;
+    UserSessionManager session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        session = new UserSessionManager(getApplicationContext());
+        if(session.isUserLoggedIn()){
+            // get user data from session
+            HashMap<String, String> user = session.getUserDetails();
 
+            // get name
+            String username = user.get(UserSessionManager.KEY_USERNAME);
+            setTitle("DTRQAndroid- Bienvenue " + username);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //gère le click sur une action de l'ActionBar
+        switch (item.getItemId()){
+            case R.id.btn_driving_lessons:
+                Navigation.findNavController(findViewById(R.id.nav_host_fragment)).navigate(R.id.driving_lessons_tabs_fragment);
+                return true;
+            case R.id.btn_training_sessions:
+                Navigation.findNavController(findViewById(R.id.nav_host_fragment)).navigate(R.id.training_sessions_tabs_fragment);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
