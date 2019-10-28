@@ -3,11 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@+id/drivingLessonListFragment">
+    app:startDestination="@id/home_fragment">
 
     <fragment
-        android:id="@+id/drivingLessonListFragment"
-        android:name="org.diiage.dtrqandroid.data.list.DrivingLessonListFragment"
-        android:label="driving_lesson_list_fragment"
-        tools:layout="@layout/driving_lesson_list_fragment" />
+        android:id="@+id/driving_lessons_tabs_fragment"
+        android:name="org.diiage.dtrqandroid.drivingLessons.DrivingLessonsTabsFragment"
+        android:label="fragment_driving_lessons_tabs"
+        tools:layout="@layout/fragment_driving_lessons_tabs" />
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="org.diiage.dtrqandroid.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_drivingLessonsTabsFragment"
+            app:destination="@id/driving_lessons_tabs_fragment" />
+    </fragment>
 </navigation>

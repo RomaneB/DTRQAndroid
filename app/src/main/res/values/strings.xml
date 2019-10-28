@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="driving_lessons_tabs_title_lecons_prochaines">Leçons prochaines</string>
+    <string name="driving_lessons_tabs_title_mes_lecons">Mes leçons</string>
+    <string name="driving_lessons_tabs_title_lecons_precedentes">Leçons précédentes</string>
 </resources>
