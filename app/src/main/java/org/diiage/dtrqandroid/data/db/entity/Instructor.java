@@ -9,8 +9,8 @@ import androidx.room.PrimaryKey;
 public class Instructor {
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
-    public long idInstructor;
+    @ColumnInfo(name = "instructorId")
+    public long instructorId;
 
     @ColumnInfo(name = "firstName")
     public String firstName;
@@ -18,20 +18,20 @@ public class Instructor {
     @ColumnInfo(name = "lastName")
     public String lastName;
 
-    public Instructor(@NonNull long idInstructor, @NonNull String firstName, @NonNull String lastName)
+    public Instructor(@NonNull long instructorId, @NonNull String firstName, @NonNull String lastName)
     {
-        this.idInstructor = idInstructor;
+        this.instructorId = instructorId;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
 
-    public long getidInstructor() {
-        return idInstructor;
+    public long getInstructorId() {
+        return instructorId;
     }
 
-    public void setIdInstructor(long idInstructor) {
-        this.idInstructor = idInstructor;
+    public void setInstructorId(long idInstructor) {
+        this.instructorId = idInstructor;
     }
 
     public String getFirstName() {

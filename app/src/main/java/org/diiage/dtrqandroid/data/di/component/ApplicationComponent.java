@@ -4,7 +4,6 @@ import android.app.Application;
 
 import org.diiage.dtrqandroid.MainActivity;
 import org.diiage.dtrqandroid.data.di.module.ApplicationModule;
-import org.diiage.dtrqandroid.data.di.module.DatabaseModule;
 import org.diiage.dtrqandroid.data.di.module.RoomModule;
 import org.diiage.dtrqandroid.data.list.DrivingLessonListFragment;
 import org.diiage.dtrqandroid.data.list.MyDrivingLessonListFragment;

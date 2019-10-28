@@ -8,20 +8,24 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 @Dao
 public interface DrivingLessonDao {
     @Query("SELECT * FROM drivingLesson")
     LiveData<List<DrivingLesson>> getAllDrivingLessons();
 
-    @Query("SELECT * FROM drivingLesson WHERE userId = 0 AND date NOT IN (SELECT date FROM drivingLesson WHERE userId = :idUser)")
-    LiveData<List<DrivingLesson>> getAvailableDrivingLessons(Long idUser);
+    @Query("SELECT * FROM drivingLesson WHERE userId = 0 AND date NOT IN (SELECT date FROM drivingLesson WHERE userId = :userId)")
+    LiveData<List<DrivingLesson>> getAvailableDrivingLessons(Long userId);
 
     @Insert
     void insert(DrivingLesson drivingLesson);
 
-    @Query("SELECT * FROM drivingLesson WHERE userId = :idUser")
-    LiveData<List<DrivingLesson>> getMyDrivingLessons(long idUser);
+    @Query("UPDATE drivingLesson SET userId = :userId WHERE drivingLessonId = :drivingId ")
+    void inscription(Long userId, Long drivingId);
+
+    @Query("SELECT * FROM drivingLesson WHERE userId = :userId")
+    LiveData<List<DrivingLesson>> getMyDrivingLessons(long userId);
 
 
 }

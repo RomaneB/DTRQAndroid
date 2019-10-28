@@ -117,7 +117,7 @@ public class UserSessionManager {
     public Long getUserId(){
 
         HashMap<String, String> user = getUserDetails();
-        Long idUser = Long.parseLong(user.get(UserSessionManager.KEY_ID));
-        return idUser;
+        Long userId = Long.parseLong(user.get(UserSessionManager.KEY_ID));
+        return userId;
     }
 }

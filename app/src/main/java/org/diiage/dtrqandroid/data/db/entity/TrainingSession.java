@@ -11,8 +11,8 @@ import androidx.room.TypeConverters;
 @Entity(tableName = "TrainingSession")
 public class TrainingSession {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "idTrainingSession")
-    public long idTrainingSession;
+    @ColumnInfo(name = "trainingSessionId")
+    public long trainingSessionId;
 
     @ColumnInfo(name = "date")
     @TypeConverters({DateTypeConverter.class})
@@ -21,18 +21,18 @@ public class TrainingSession {
     @ColumnInfo(name = "availableSeat")
     public int availableSeat;
 
-    public TrainingSession(@NonNull long idTrainingSession, @NonNull Date date, @NonNull int availableSeat){
-        this.idTrainingSession = idTrainingSession;
+    public TrainingSession(@NonNull long trainingSessionId, @NonNull Date date, @NonNull int availableSeat){
+        this.trainingSessionId = trainingSessionId;
         this.availableSeat = availableSeat;
         this.date = date;
     }
 
-    public long getIdTrainingSession() {
-        return idTrainingSession;
+    public long getTrainingSessionId() {
+        return trainingSessionId;
     }
 
-    public void setIdTrainingSession(long idTrainingSession) {
-        this.idTrainingSession = idTrainingSession;
+    public void setTrainingSessionId(long trainingSessionId) {
+        this.trainingSessionId = trainingSessionId;
     }
 
     public Date getDate() {

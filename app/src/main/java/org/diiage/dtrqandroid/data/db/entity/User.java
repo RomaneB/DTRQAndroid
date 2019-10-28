@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "User")
 public class User {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "idUser")
-    public long idUser;
+    @ColumnInfo(name = "userId")
+    public long userId;
 
     @ColumnInfo(name = "username")
     public String username;
@@ -17,20 +17,20 @@ public class User {
     @ColumnInfo(name = "password")
     public String password;
 
-    public User(@NonNull long idUser, @NonNull String username , @NonNull String password)
+    public User(@NonNull long userId, @NonNull String username , @NonNull String password)
     {
-        this.idUser = idUser;
+        this.userId = userId;
         this.password = password;
         this.username = username;
     }
 
 
-    public long getId() {
-        return idUser;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setId(long idUser) {
-        this.idUser = idUser;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {

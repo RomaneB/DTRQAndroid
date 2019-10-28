@@ -34,7 +34,7 @@ public class MyDrivingLessonListFragment extends Fragment {
 
     private RecyclerView.LayoutManager layoutManager;
 
-    private Long idUser;
+    private Long userId;
 
     public MyDrivingLessonListFragment() {
         // Required empty public constructor
@@ -46,7 +46,7 @@ public class MyDrivingLessonListFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         session = new UserSessionManager(getContext());
-        idUser = session.getUserId();
+        userId = session.getUserId();
 
         ((RoomApplication) getActivity().getApplication())
                 .getApplicationComponent()
@@ -61,7 +61,7 @@ public class MyDrivingLessonListFragment extends Fragment {
 
 
 
-        myDrivingLessonViewModel.getMyDrivingLessons(idUser).observe(this, sessions -> {
+        myDrivingLessonViewModel.getMyDrivingLessons(userId).observe(this, sessions -> {
                     if(sessions != null && adapter != null){
                         adapter.setMyDrivingLessons(sessions);
                     }
@@ -87,8 +87,8 @@ public class MyDrivingLessonListFragment extends Fragment {
 
         recyclerView.setAdapter(adapter);
 
-        if(myDrivingLessonViewModel != null && myDrivingLessonViewModel.getMyDrivingLessons(idUser).getValue() != null ){
-            adapter.setMyDrivingLessons(myDrivingLessonViewModel.getMyDrivingLessons(idUser).getValue());
+        if(myDrivingLessonViewModel != null && myDrivingLessonViewModel.getMyDrivingLessons(userId).getValue() != null ){
+            adapter.setMyDrivingLessons(myDrivingLessonViewModel.getMyDrivingLessons(userId).getValue());
         }
         return view;
 

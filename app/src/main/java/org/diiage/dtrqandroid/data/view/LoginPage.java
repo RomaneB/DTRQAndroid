@@ -31,6 +31,8 @@ public class LoginPage extends Fragment {
     UserSessionManager session;
 
 
+    String username;
+    String password;
     public LoginPage() {
         // Required empty public constructor
     }
@@ -49,48 +51,49 @@ public class LoginPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
         return inflater.inflate(R.layout.fragment_login_page, container, false);
-
-
     }
 
 
     @Override
-    public void onViewCreated (View view, Bundle savedInstanceState){
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         userViewModel = ViewModelProviders.of(this, viewModelFactory).get(UserViewModel.class);
         session = new UserSessionManager(getContext());
         Fragment currentFragment = this;
 
-        if(!session.isUserLoggedIn()) {
+        if (!session.isUserLoggedIn()) {
             view.findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     EditText usernameEditText = (EditText) view.findViewById(R.id.editUsername);
-                    String username = usernameEditText.getText().toString();
+                    username = usernameEditText.getText().toString();
                     EditText passwordEditText = view.findViewById(R.id.editPassword);
-                    String password = passwordEditText.getText().toString();
-                    userViewModel.getUserByUsername(username, password).observe(currentFragment, user -> {
-                        if (user != null) {
-                            session.createUserLoginSession(username, Long.toString(user.getId()));
-                            getActivity().setTitle("DTRQAndroid - Bienvenue " + username);
-                            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
-                        } else {
-                            TextView txtError = (TextView) view.findViewById(R.id.txtError);
-                            txtError.setText("Nom d'utlisateur ou mot de passe incorrect");
-                        }
-                    });
+                    password = passwordEditText.getText().toString();
+                    if(userViewModel != null ){
+                        LoginUser(username, password);
+                    }
 
                 }
             });
-        }else{
+        } else {
             Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
         }
 
 
     }
 
-
+    public void LoginUser(String username, String password){
+        View view = getView();
+        userViewModel.getUserByUsername(username, password).observe(this, user -> {
+            if (user != null) {
+                session.createUserLoginSession(username, Long.toString(user.getUserId()));
+                getActivity().setTitle("DTRQAndroid - Bienvenue " + username);
+                Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
+            } else {
+                TextView txtError = (TextView) view.findViewById(R.id.txtError);
+                txtError.setText("Nom d'utlisateur ou mot de passe incorrect");
+            }
+        });
+    }
 }

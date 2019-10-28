@@ -1,11 +1,15 @@
 package org.diiage.dtrqandroid.data.list;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
@@ -35,13 +39,11 @@ public class DrivingLessonListFragment extends Fragment {
     ViewModelProvider.Factory viewModelFactory;
 
     UserSessionManager session;
-    private Long idUser;
+    private Long userId;
     private LayoutInflater layoutInflater;
     private DrivingLessonViewModel drivingLessonViewModel;
     private RecyclerView recyclerView;
     private DrivingLessonAdapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private List<DrivingLesson> listOfData;
     public DrivingLessonListFragment() {
         // Required empty public constructor
     }
@@ -54,7 +56,7 @@ public class DrivingLessonListFragment extends Fragment {
         session = new UserSessionManager(getContext());
 
         // get id
-        idUser = session.getUserId();
+        userId = session.getUserId();
         ((RoomApplication) getActivity().getApplication())
                 .getApplicationComponent()
                 .inject(this);
@@ -64,12 +66,11 @@ public class DrivingLessonListFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         drivingLessonViewModel = ViewModelProviders.of(this, viewModelFactory).get(DrivingLessonViewModel.class);
-        drivingLessonViewModel.getAvailableDrivingLessons(idUser).observe(this, sessions -> {
+        drivingLessonViewModel.getAvailableDrivingLessons(userId).observe(this, sessions -> {
                 if(sessions != null && adapter != null){
                     adapter.setDrivingLessons(sessions);
                 }
-        }
-        );
+        });
     }
 
 
@@ -78,6 +79,7 @@ public class DrivingLessonListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.driving_lesson_list_fragment, container, false);
+
 
         view.findViewById(R.id.btnLogout).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +95,8 @@ public class DrivingLessonListFragment extends Fragment {
             }
         });
 
+
+
         layoutInflater = getActivity().getLayoutInflater();
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
@@ -100,12 +104,12 @@ public class DrivingLessonListFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
 
-        adapter = new DrivingLessonAdapter();
+        adapter = new DrivingLessonAdapter(this, getContext());
 
         recyclerView.setAdapter(adapter);
 
-        if(drivingLessonViewModel != null && drivingLessonViewModel.getAvailableDrivingLessons(idUser).getValue() != null ){
-            adapter.setDrivingLessons(drivingLessonViewModel.getAvailableDrivingLessons(idUser).getValue());
+        if(drivingLessonViewModel != null && drivingLessonViewModel.getAvailableDrivingLessons(userId).getValue() != null ){
+            adapter.setDrivingLessons(drivingLessonViewModel.getAvailableDrivingLessons(userId).getValue());
         }
         return view;
 
