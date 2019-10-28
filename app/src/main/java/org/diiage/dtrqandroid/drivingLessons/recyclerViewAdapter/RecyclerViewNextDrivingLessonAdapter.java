@@ -1,4 +1,4 @@
-package org.diiage.dtrqandroid.data.list;
+package org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -15,7 +15,6 @@ import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +24,9 @@ import javax.inject.Inject;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class DrivingLessonAdapter extends RecyclerView.Adapter<DrivingLessonAdapter.DrivingLessonHolder> {
+public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<RecyclerViewNextDrivingLessonAdapter.DrivingLessonHolder> {
     @Inject
     ViewModelProvider.Factory viewModelFactory;
     private List<DrivingLesson> drivingLessonList = new ArrayList<>();
@@ -38,7 +36,7 @@ public class DrivingLessonAdapter extends RecyclerView.Adapter<DrivingLessonAdap
     private Context context;
     private Long userId;
 
-    public DrivingLessonAdapter(Fragment fragment, Context context){
+    public RecyclerViewNextDrivingLessonAdapter(Fragment fragment, Context context){
         fragment = fragment;
         context = context;
         session = new UserSessionManager(context);
@@ -48,7 +46,7 @@ public class DrivingLessonAdapter extends RecyclerView.Adapter<DrivingLessonAdap
     @NonNull
     @Override
     public DrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.driving_lesson_item ,parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_driving_lesson_item,parent, false);
 
 
         return new DrivingLessonHolder(itemView);

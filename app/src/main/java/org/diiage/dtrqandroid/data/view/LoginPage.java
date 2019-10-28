@@ -77,7 +77,7 @@ public class LoginPage extends Fragment {
                 }
             });
         } else {
-            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
+            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_home_fragment);
         }
 
 
@@ -89,7 +89,7 @@ public class LoginPage extends Fragment {
             if (user != null) {
                 session.createUserLoginSession(username, Long.toString(user.getUserId()));
                 getActivity().setTitle("DTRQAndroid - Bienvenue " + username);
-                Navigation.findNavController(view).navigate(R.id.action_loginPage_to_drivingLessonListFragment);
+                Navigation.findNavController(view).navigate(R.id.action_loginPage_to_home_fragment);
             } else {
                 TextView txtError = (TextView) view.findViewById(R.id.txtError);
                 txtError.setText("Nom d'utlisateur ou mot de passe incorrect");
