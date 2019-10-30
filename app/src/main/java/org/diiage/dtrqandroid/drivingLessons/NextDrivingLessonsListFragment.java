@@ -1,10 +1,14 @@
 package org.diiage.dtrqandroid.drivingLessons;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
@@ -45,6 +49,8 @@ public class NextDrivingLessonsListFragment extends Fragment {
 
         // get id
         userId = session.getUserId();
+
+
         ((RoomApplication) getActivity().getApplication())
                 .getApplicationComponent()
                 .inject(this);
@@ -53,9 +59,10 @@ public class NextDrivingLessonsListFragment extends Fragment {
 
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        drivingLessonViewModel = ViewModelProviders.of(this, viewModelFactory).get(DrivingLessonViewModel.class);
+        this.drivingLessonViewModel = ViewModelProviders.of(this, viewModelFactory).get(DrivingLessonViewModel.class);
         drivingLessonViewModel.getAvailableDrivingLessons(userId).observe(this, sessions -> {
             if(sessions != null && adapter != null){
+
                 adapter.setDrivingLessons(sessions);
             }
         });
@@ -69,21 +76,29 @@ public class NextDrivingLessonsListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_next_driving_lessons_list, container, false);
 
 
-        view.findViewById(R.id.btnLogout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                session.logoutUser(getActivity());
-            }
-        });
+        view.findViewById(R.id.btnLogout).setOnClickListener(v -> session.logoutUser(getActivity()));
 
         layoutInflater = getActivity().getLayoutInflater();
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView = view.findViewById(R.id.recyclerViewNextDriving);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
+        adapter = new RecyclerViewNextDrivingLessonAdapter(drivingLesson -> {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+            builder.setTitle("Inscription")
+                    .setMessage("Voulez-vous vous inscrire?")
+                    .setPositiveButton("Oui", (dialog, which) -> {
+                        //TODO retrieve id and update the driving lesson with the user id
 
-        adapter = new RecyclerViewNextDrivingLessonAdapter(this, getContext());
+                        drivingLessonViewModel = ViewModelProviders.of(getActivity() , viewModelFactory).get(DrivingLessonViewModel.class);
+                        drivingLessonViewModel.registrer(userId,  drivingLesson.getDrivingLessonId());
+                        Toast.makeText(view.getContext(),"Inscription réussie" + drivingLesson.drivingLessonId, Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton("Non", (dialog, which) -> {
+                        Toast.makeText(view.getContext(), "Inscription annulée", Toast.LENGTH_SHORT).show();
+                    });
+            builder.create().show();
+        });
 
         recyclerView.setAdapter(adapter);
 

@@ -1,9 +1,11 @@
 package org.diiage.dtrqandroid.drivingLessons;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
@@ -75,7 +77,24 @@ public class MyDrivingLessonsListFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
 
-        adapter = new RecyclerViewMyDrivingLessonAdapter();
+        adapter = new RecyclerViewMyDrivingLessonAdapter( myDrivingLesson -> {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+            builder.setTitle("Se désincrire")
+                    .setMessage("Voulez-vous vous désinscrire?")
+                    .setPositiveButton("Oui", (dialog, which) -> {
+                        //TODO retrieve id and update the driving lesson with the user id
+
+                        myDrivingLessonViewModel = ViewModelProviders.of(getActivity() , viewModelFactory).get(DrivingLessonViewModel.class);
+                        myDrivingLessonViewModel.registrer(Long.valueOf(0),  myDrivingLesson.getDrivingLessonId());
+                        Toast.makeText(view.getContext(),"Désinscription réussie" + myDrivingLesson.drivingLessonId, Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton("Non", (dialog, which) -> {
+                        Toast.makeText(view.getContext(), "Désinscription annulée", Toast.LENGTH_SHORT).show();
+                    });
+            builder.create().show();
+        });
+
+
 
         recyclerView.setAdapter(adapter);
 

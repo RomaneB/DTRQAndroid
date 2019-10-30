@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -13,7 +14,7 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_percent="0.63"
+            app:layout_constraintGuide_end="137dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,15 +34,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                        <TextView
-                            android:id="@+id/text_driving"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Avec Jean-Paul A."
-                            android:textSize="14sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
                         <androidx.constraintlayout.widget.Guideline
                             android:id="@+id/guideline3"
@@ -54,14 +46,40 @@
                             android:id="@+id/date_lesson"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
                             android:text="Séance du "
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toTopOf="@+id/guideline3"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.173" />
+
+                        <TextView
+                            android:id="@+id/instructor_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="17dp"
+                            android:text="Avec Jean-Paul A."
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toTopOf="@+id/text_driving"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/date_lesson"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/text_driving"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Decription"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/guideline3"
+                            app:layout_constraintVertical_bias="1.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -78,7 +96,7 @@
                     android:layout_height="match_parent">
 
                         <Button
-                            android:id="@+id/btnInscrire"
+                            android:id="@+id/btnRegister"
                             android:layout_width="134dp"
                             android:layout_height="48dp"
                             android:layout_marginEnd="4dp"

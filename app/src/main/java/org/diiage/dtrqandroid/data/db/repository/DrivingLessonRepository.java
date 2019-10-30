@@ -4,6 +4,7 @@ import org.diiage.dtrqandroid.data.db.dao.DrivingLessonDao;
 import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 
 import java.util.List;
+import java.util.concurrent.Executors;
 
 import javax.inject.Inject;
 
@@ -28,8 +29,9 @@ public class DrivingLessonRepository {
     public LiveData<List<DrivingLesson>> getMyDrivingLessons(long userId) {
         return drivingLessonDao.getMyDrivingLessons(userId);
     }
-    public void inscription(Long userId, Long drivingLessonId) {
-        drivingLessonDao.inscription(userId, drivingLessonId);
+
+    public void registrer(Long userId, Long drivingLessonId) {
+        Executors.newSingleThreadExecutor().execute(() -> drivingLessonDao.registrer(userId, drivingLessonId));
     }
 
     public void insert(DrivingLesson drivingLesson) {

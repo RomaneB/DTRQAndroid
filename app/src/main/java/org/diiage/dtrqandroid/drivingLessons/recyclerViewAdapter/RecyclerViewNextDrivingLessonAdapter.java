@@ -14,16 +14,19 @@ import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
+import org.diiage.dtrqandroid.drivingLessons.NextDrivingLessonsListFragment;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<RecyclerViewNextDrivingLessonAdapter.DrivingLessonHolder> {
@@ -35,12 +38,10 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     private Fragment fragment;
     private Context context;
     private Long userId;
+    private Consumer onclick;
 
-    public RecyclerViewNextDrivingLessonAdapter(Fragment fragment, Context context){
-        fragment = fragment;
-        context = context;
-        session = new UserSessionManager(context);
-        userId = session.getUserId();
+    public RecyclerViewNextDrivingLessonAdapter(Consumer<DrivingLesson> onClick){
+        this.onclick = onClick;
     }
 
     @NonNull
@@ -57,38 +58,7 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
         DrivingLesson currentDrivingLesson = drivingLessonList.get(position);
         holder.textViewDate.setText(holder.textViewDate.getText() + new SimpleDateFormat("dd MMMM yyyy 'à' hh'h'mm").format(currentDrivingLesson.getDate())); // simpledate format
         holder.textViewText.setText(currentDrivingLesson.getText());
-
-
-        holder.btnInscrire.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View vi) {
-                String test ="test";
-                final AlertDialog.Builder builder = new AlertDialog.Builder(vi.getContext());
-                builder.setTitle("Inscription")
-                        .setMessage("Voulez-vous vous inscrire?")
-                        .setPositiveButton("Oui", new DialogInterface.OnClickListener(){
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //TODO retrieve id and update the driving lesson with the user id
-                                /*
-                                drivingLessonViewModel = ViewModelProviders.of(, viewModelFactory).get(DrivingLessonViewModel.class);
-                                drivingLessonViewModel.inscription(userId, drivingLessonList.get(position).getDrivingLessonId());*/
-                                Toast.makeText(vi.getContext(),"Inscription réussie" + drivingLessonList.get(position).drivingLessonId, Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .setNegativeButton("Non", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
-                                Toast.makeText(vi.getContext(), "Inscription annulée", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                builder.create().show();
-
-
-            }
-        });
+        holder.btnInscrire.setOnClickListener(v -> this.onclick.accept(currentDrivingLesson));
     }
 
     public void setDrivingLessons(List<DrivingLesson> drivingLessons){
@@ -104,13 +74,15 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     class DrivingLessonHolder extends RecyclerView.ViewHolder{
         private TextView textViewDate;
         private TextView textViewText;
+
         private Button btnInscrire;
 
         public DrivingLessonHolder(View itemView){
             super(itemView);
             textViewDate = itemView.findViewById(R.id.date_lesson);
             textViewText = itemView.findViewById(R.id.text_driving);
-            btnInscrire = itemView.findViewById(R.id.btnInscrire);
+
+            btnInscrire = itemView.findViewById(R.id.btnRegister);
 
 
         }

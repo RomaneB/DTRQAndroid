@@ -17,7 +17,7 @@ public class TrainingSesssionViewModel extends ViewModel {
         this.trainingSessionRepository = trainingSessionRepository;
     }
 
-    LiveData<List<TrainingSession>> getAllTrainingSessions() { return trainingSessionRepository.getAllTrainingSessions();}
+   LiveData<List<TrainingSession>> getAllTrainingSessions() { return trainingSessionRepository.getAllTrainingSessions();}
 
     public void insert(TrainingSession trainingSession) { trainingSessionRepository.insert(trainingSession);}
 }
