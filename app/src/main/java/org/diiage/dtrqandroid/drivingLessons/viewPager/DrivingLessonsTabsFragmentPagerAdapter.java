@@ -27,7 +27,7 @@ public class DrivingLessonsTabsFragmentPagerAdapter extends FragmentStatePagerAd
         switch(position) {
             default:
             case 0:
-                return new NextDrivingLessonsListFragment();
+                return new NextDrivingLessonsListFragment() ;
             case 1:
                 return new MyDrivingLessonsListFragment();
             case 2:
@@ -40,11 +40,11 @@ public class DrivingLessonsTabsFragmentPagerAdapter extends FragmentStatePagerAd
         switch(position) {
             default:
             case 0:
-                return this.context.getString(R.string.driving_lessons_tabs_title_lecons_precedentes);
+                return this.context.getString(R.string.driving_lessons_tabs_title_lecons_prochaines);
             case 1:
                 return this.context.getString(R.string.driving_lessons_tabs_title_mes_lecons);
             case 2:
-                return this.context.getString(R.string.driving_lessons_tabs_title_lecons_prochaines);
+                return this.context.getString(R.string.driving_lessons_tabs_title_lecons_precedentes);
         }
     }
 

@@ -9,8 +9,12 @@ import android.widget.Toast;
 
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
+import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
+import org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
+import org.diiage.dtrqandroid.databinding.FragmentMyDrivingLessonsListBinding;
+import org.diiage.dtrqandroid.databinding.FragmentNextDrivingLessonsListBinding;
 import org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter.RecyclerViewMyDrivingLessonAdapter;
 
 import javax.inject.Inject;
@@ -27,14 +31,14 @@ public class MyDrivingLessonsListFragment extends Fragment {
 
     UserSessionManager session;
 
-    private LayoutInflater layoutInflater;
     private DrivingLessonViewModel myDrivingLessonViewModel;
-    private RecyclerView recyclerView;
-    private RecyclerViewMyDrivingLessonAdapter adapter;
+    private  FragmentMyDrivingLessonsListBinding binding;
 
-    private RecyclerView.LayoutManager layoutManager;
 
     private Long userId;
+
+    private RecyclerView recyclerView;
+    private RecyclerViewMyDrivingLessonAdapter adapter;
 
     public MyDrivingLessonsListFragment() {
         // Required empty public constructor
@@ -67,41 +71,41 @@ public class MyDrivingLessonsListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_my_driving_lessons_list, container, false);
+
+        binding = FragmentMyDrivingLessonsListBinding.inflate(inflater,container,false);
+        this.myDrivingLessonViewModel = ViewModelProviders.of(this, viewModelFactory).get(DrivingLessonViewModel.class);
+        recyclerView = binding.myDrivingLessonRecyclerView;
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
 
 
-        layoutInflater = getActivity().getLayoutInflater();
-
-        recyclerView = (RecyclerView) view.findViewById(R.id.myDrivingLessonRecyclerView);
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-
-
-        adapter = new RecyclerViewMyDrivingLessonAdapter( myDrivingLesson -> {
-            final AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-            builder.setTitle("Se désincrire")
-                    .setMessage("Voulez-vous vous désinscrire?")
-                    .setPositiveButton("Oui", (dialog, which) -> {
-                        //TODO retrieve id and update the driving lesson with the user id
-
-                        myDrivingLessonViewModel = ViewModelProviders.of(getActivity() , viewModelFactory).get(DrivingLessonViewModel.class);
-                        myDrivingLessonViewModel.registrer(Long.valueOf(0),  myDrivingLesson.getDrivingLessonId());
-                        Toast.makeText(view.getContext(),"Désinscription réussie" + myDrivingLesson.drivingLessonId, Toast.LENGTH_SHORT).show();
-                    })
-                    .setNegativeButton("Non", (dialog, which) -> {
-                        Toast.makeText(view.getContext(), "Désinscription annulée", Toast.LENGTH_SHORT).show();
-                    });
-            builder.create().show();
+        myDrivingLessonViewModel.getMyDrivingLessons(userId).observe(this, drivingLessons -> {
+            if(drivingLessons != null){
+                RecyclerViewMyDrivingLessonAdapter adapter = new RecyclerViewMyDrivingLessonAdapter(this::onClickButton,this, this.getContext(), drivingLessons );
+                recyclerView.setAdapter(adapter);
+            }
         });
 
+        return binding.getRoot();
 
+    }
 
-        recyclerView.setAdapter(adapter);
+    private void onClickButton(DrivingLessonWithInstructor myDrivingLesson){
 
-        if(myDrivingLessonViewModel != null && myDrivingLessonViewModel.getMyDrivingLessons(userId).getValue() != null ){
-            adapter.setMyDrivingLessons(myDrivingLessonViewModel.getMyDrivingLessons(userId).getValue());
-        }
-        return view;
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Se désincrire")
+                .setMessage("Voulez-vous vous désinscrire?")
+                .setPositiveButton("Oui", (dialog, which) -> {
+                    //TODO retrieve id and update the driving lesson with the user id
+
+                    myDrivingLessonViewModel = ViewModelProviders.of(getActivity() , viewModelFactory).get(DrivingLessonViewModel.class);
+                    myDrivingLessonViewModel.registrer(Long.valueOf(0),  myDrivingLesson.getDrivingLessonId());
+                    Toast.makeText(getContext(),"Désinscription réussie" + myDrivingLesson.drivingLessonId, Toast.LENGTH_SHORT).show();
+                })
+                .setNegativeButton("Non", (dialog, which) -> {
+                    Toast.makeText(getContext(), "Désinscription annulée", Toast.LENGTH_SHORT).show();
+                });
+        builder.create().show();
 
     }
 }
