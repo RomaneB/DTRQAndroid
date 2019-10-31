@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_home_fragment_to_trainingSessionsTabsFragment"
             app:destination="@id/training_sessions_tabs_fragment" />
+        <action
+            android:id="@+id/btnLogout"
+            app:destination="@id/loginPage" />
     </fragment>
     <fragment
         android:id="@+id/training_sessions_tabs_fragment"

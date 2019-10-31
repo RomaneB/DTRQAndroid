@@ -12,12 +12,5 @@
             android:layout_height="443dp"
             tools:listitem="@layout/fragment_driving_lesson_item" />
 
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Se déconnecter"/>
-
-
     </LinearLayout>
 </layout>

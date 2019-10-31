@@ -8,6 +8,7 @@ import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import org.diiage.dtrqandroid.R;
@@ -19,6 +20,7 @@ import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 import org.diiage.dtrqandroid.databinding.FragmentDrivingLessonItemBinding;
 import org.diiage.dtrqandroid.databinding.FragmentNextDrivingLessonsListBinding;
 import org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter.RecyclerViewNextDrivingLessonAdapter;
+import org.diiage.dtrqandroid.generated.callback.OnClickListener;
 
 import javax.inject.Inject;
 
@@ -45,6 +47,7 @@ public class NextDrivingLessonsListFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private RecyclerViewNextDrivingLessonAdapter adapter;
+    private Button btnLogout;
 
 
     public NextDrivingLessonsListFragment() {
@@ -57,7 +60,6 @@ public class NextDrivingLessonsListFragment extends Fragment {
         session = new UserSessionManager(getContext());
         // get id
         userId = session.getUserId();
-
 
         ((RoomApplication) getActivity().getApplication())
                 .getApplicationComponent()
@@ -79,15 +81,6 @@ public class NextDrivingLessonsListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_next_driving_lessons_list, container, false);
-
-
-        view.findViewById(R.id.btnLogout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                session.logoutUser(getActivity());
-            }
-        });
         binding = FragmentNextDrivingLessonsListBinding.inflate(inflater,container,false);
         this.drivingLessonViewModel = ViewModelProviders.of(this, viewModelFactory).get(DrivingLessonViewModel.class);
         recyclerView = binding.recyclerViewNextDriving;
@@ -101,9 +94,7 @@ public class NextDrivingLessonsListFragment extends Fragment {
                 recyclerView.setAdapter(adapter);
             }
         });
-
-
-
+       
        return binding.getRoot();
 
     }
@@ -125,5 +116,6 @@ public class NextDrivingLessonsListFragment extends Fragment {
             builder.create().show();
 
     }
+
 
 }
