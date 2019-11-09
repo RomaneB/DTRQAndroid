@@ -17,6 +17,9 @@ import org.diiage.dtrqandroid.databinding.FragmentMyDrivingLessonsListBinding;
 import org.diiage.dtrqandroid.databinding.FragmentNextDrivingLessonsListBinding;
 import org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter.RecyclerViewMyDrivingLessonAdapter;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import javax.inject.Inject;
 
 import androidx.fragment.app.Fragment;
@@ -24,6 +27,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public class MyDrivingLessonsListFragment extends Fragment {
     @Inject
@@ -92,20 +97,32 @@ public class MyDrivingLessonsListFragment extends Fragment {
 
     private void onClickButton(DrivingLessonWithInstructor myDrivingLesson){
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Se désincrire")
-                .setMessage("Voulez-vous vous désinscrire?")
-                .setPositiveButton("Oui", (dialog, which) -> {
-                    //TODO retrieve id and update the driving lesson with the user id
+        Date currentDate = new Date();
+        Date threeDaysAfter = new Date(currentDate.getTime() + 259200000L);
+        if(myDrivingLesson.getDate().before(threeDaysAfter)){
+            final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setTitle("Impossible de vous désinscrire")
+                    .setMessage("Ipossible de vous désinscrire car votre lesson est dans moins de 72 heures")
+                    .setPositiveButton("Ok", (dialog, which) -> {
+                    });
+            builder.create().show();
+        } else {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setTitle("Se désincrire")
+                    .setMessage("Voulez-vous vous désinscrire?")
+                    .setPositiveButton("Oui", (dialog, which) -> {
+                        //TODO retrieve id and update the driving lesson with the user id
 
-                    myDrivingLessonViewModel = ViewModelProviders.of(getActivity() , viewModelFactory).get(DrivingLessonViewModel.class);
-                    myDrivingLessonViewModel.registrer(Long.valueOf(0),  myDrivingLesson.getDrivingLessonId());
-                    Toast.makeText(getContext(),"Désinscription réussie" + myDrivingLesson.drivingLessonId, Toast.LENGTH_SHORT).show();
-                })
-                .setNegativeButton("Non", (dialog, which) -> {
-                    Toast.makeText(getContext(), "Désinscription annulée", Toast.LENGTH_SHORT).show();
-                });
-        builder.create().show();
+                        myDrivingLessonViewModel = ViewModelProviders.of(getActivity() , viewModelFactory).get(DrivingLessonViewModel.class);
+                        myDrivingLessonViewModel.registrer(Long.valueOf(0),  myDrivingLesson.getDrivingLessonId());
+                        Toast.makeText(getContext(),"Désinscription réussie" , Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton("Non", (dialog, which) -> {
+                        Toast.makeText(getContext(), "Désinscription annulée", Toast.LENGTH_SHORT).show();
+                    });
+            builder.create().show();
+        }
+
 
     }
 }

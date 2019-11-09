@@ -198,28 +198,28 @@ public class RoomModule {
 
                 DrivingLesson d1 = null;
                 try {
-                    d1 = new DrivingLesson(1, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-10-21 12:00:00"), "Driving de Patatana", 1,4);
+                    d1 = new DrivingLesson(1, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-21 12:00:00"), "Driving de Patatana", 1,4);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
                 drivingLessonDao.insert(d1);
                 DrivingLesson d2 = null;
                 try {
-                    d2 = new DrivingLesson(2, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-10-21 15:00:00"), "Driving sans user", 2, 0);
+                    d2 = new DrivingLesson(2, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-12 14:00:00"), "Driving sans user", 2, 4);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
                 drivingLessonDao.insert(d2);
                 DrivingLesson d3 = null;
                 try {
-                    d3 = new DrivingLesson(3,  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-10-21 12:40:00"), "Driving de Baboon",1,2);
+                    d3 = new DrivingLesson(3,  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-21 12:40:00"), "Driving de Baboon",1,2);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
                 drivingLessonDao.insert(d3);
                 DrivingLesson d4 = null;
                 try {
-                    d4 = new DrivingLesson(4, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-10-21 12:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,0);
+                    d4 = new DrivingLesson(4, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-08 12:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,0);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }

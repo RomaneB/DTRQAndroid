@@ -16,7 +16,7 @@ public interface DrivingLessonDao {
     @Query("SELECT * FROM drivingLesson")
     LiveData<List<DrivingLesson>> getAllDrivingLessons();
 
-    @Query("SELECT * FROM drivingLesson INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId WHERE userId = 0 AND date NOT IN (SELECT date FROM drivingLesson WHERE userId = :userId)")
+    @Query("SELECT * FROM drivingLesson INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId WHERE userId = 0 AND date(datetime(date / 1000 , 'unixepoch')) > date('now') AND date NOT IN (SELECT date FROM drivingLesson WHERE userId = :userId) ORDER BY date")
     LiveData<List<DrivingLessonWithInstructor>> getAvailableDrivingLessons(Long userId);
 
     @Insert
@@ -25,7 +25,7 @@ public interface DrivingLessonDao {
     @Query("UPDATE drivingLesson SET userId = :userId WHERE drivingLessonId = :drivingId")
     void registrer(Long userId, Long drivingId);
 
-    @Query("SELECT * FROM drivingLesson INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId WHERE userId = :userId")
+    @Query("SELECT * FROM drivingLesson INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId WHERE userId = :userId AND date(datetime(date / 1000 , 'unixepoch')) > date('now') ORDER BY date")
     LiveData<List<DrivingLessonWithInstructor>> getMyDrivingLessons(long userId);
 
     @Query("SELECT * FROM drivingLesson WHERE drivingLessonId = :drivingLessonId")

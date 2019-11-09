@@ -25,7 +25,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-@Database(entities = {User.class, DrivingLesson.class, Instructor.class, UserTraining.class, TrainingSession.class}, version = 7, exportSchema = false)
+@Database(entities = {User.class, DrivingLesson.class, Instructor.class, UserTraining.class, TrainingSession.class}, version = 15, exportSchema = false)
 @TypeConverters({DateTypeConverter.class})
 public abstract class AppDatabase extends RoomDatabase {
     public abstract UserDao userDao();

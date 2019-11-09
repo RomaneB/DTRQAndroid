@@ -8,4 +8,5 @@
     <string name="driving_lessons_tabs_title_lecons_precedentes">Leçons précédentes</string>
     <string name="training_sessions_tabs_title_liste_des_lecons">Liste des leçons</string>
     <string name="training_sessions_tabs_title_lecons_passees">Leçons passées</string>
+    <string name="training_sessions_tabs_title_liste_session">Liste session d\'entraînement</string>
 </resources>
