@@ -16,11 +16,15 @@ public interface DrivingLessonDao {
     @Query("SELECT * FROM drivingLesson")
     LiveData<List<DrivingLesson>> getAllDrivingLessons();
 
-    @Query("SELECT * FROM drivingLesson INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId WHERE userId = 0 AND date(datetime(date / 1000 , 'unixepoch')) > date('now') AND date NOT IN (SELECT date FROM drivingLesson WHERE userId = :userId) ORDER BY date")
+    @Query("SELECT * FROM drivingLesson " +
+            "INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId " +
+            "WHERE userId = 0 AND date(datetime(date / 1000 , 'unixepoch')) > date('now') " +
+            "AND date NOT IN (SELECT date FROM drivingLesson WHERE userId = :userId) ORDER BY date")
     LiveData<List<DrivingLessonWithInstructor>> getAvailableDrivingLessons(Long userId);
 
     @Insert
     void insert(DrivingLesson drivingLesson);
+
 
     @Query("UPDATE drivingLesson SET userId = :userId WHERE drivingLessonId = :drivingId")
     void registrer(Long userId, Long drivingId);

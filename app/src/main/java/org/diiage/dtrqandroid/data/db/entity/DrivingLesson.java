@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 @Entity(tableName = "drivingLesson")
-public class DrivingLesson {
+    public class DrivingLesson {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "drivingLessonId")
