@@ -60,7 +60,6 @@ public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<Rec
     }
 
     class MyDrivingLessonHolder extends RecyclerView.ViewHolder{
-
         private FragmentMyDrivingLessonItemBinding fragmentMyDrivingLessonItemBinding;
 
         public MyDrivingLessonHolder(FragmentMyDrivingLessonItemBinding fragmentMyDrivingLessonItemBinding){

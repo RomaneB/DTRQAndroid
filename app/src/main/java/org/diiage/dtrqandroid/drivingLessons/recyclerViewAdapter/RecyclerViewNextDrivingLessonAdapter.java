@@ -2,6 +2,7 @@ package org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
@@ -48,6 +49,7 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     public DrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding = FragmentDrivingLessonItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new DrivingLessonHolder(fragmentDrivingLessonItemBinding);
+        return new DrivingLessonHolder(null);
     }
 
     @Override
@@ -68,15 +70,17 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     }
 
     class DrivingLessonHolder extends RecyclerView.ViewHolder{
+        public DrivingLessonHolder(@NonNull View itemView) {
+            super(itemView);
+        }
 
         private FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding;
 
         public DrivingLessonHolder(FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding){
             super(fragmentDrivingLessonItemBinding.getRoot());
             this.fragmentDrivingLessonItemBinding = fragmentDrivingLessonItemBinding;
-
-
         }
+
         public void bind(DrivingLessonWithInstructor drivingLesson){
             fragmentDrivingLessonItemBinding.setDrivingLesson(drivingLesson);
             fragmentDrivingLessonItemBinding.setConsumer(onClickButton);
