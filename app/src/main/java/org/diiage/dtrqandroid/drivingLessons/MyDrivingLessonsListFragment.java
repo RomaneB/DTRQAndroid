@@ -102,7 +102,7 @@ public class MyDrivingLessonsListFragment extends Fragment {
         if(myDrivingLesson.getDate().before(threeDaysAfter)){
             final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
             builder.setTitle("Impossible de vous désinscrire")
-                    .setMessage("Ipossible de vous désinscrire car votre lesson est dans moins de 72 heures")
+                    .setMessage("Impossible de vous désinscrire car votre leçon est dans moins de 72 heures")
                     .setPositiveButton("Ok", (dialog, which) -> {
                     });
             builder.create().show();
