@@ -31,6 +31,10 @@ public class DrivingLessonRepository {
         return drivingLessonDao.getMyDrivingLessons(userId);
     }
 
+    public LiveData<List<DrivingLessonWithInstructor>> getPastDrivingLessons(long userId) {
+        return drivingLessonDao.getPastDrivingLessons(userId);
+    }
+
     public LiveData<DrivingLesson> getDrivingLessonById(long drivingLessonId) {
         return drivingLessonDao.getDrivingLessonById(drivingLessonId);
     }
