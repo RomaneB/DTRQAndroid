@@ -62,50 +62,6 @@ public class RecyclerViewTrainingSessionsAdapter extends RecyclerView.Adapter<Re
     public void onBindViewHolder(@NonNull TrainingSessionHolder holder, int position) {
         TrainingSession currentTrainingSession = trainingSessionsList.get(position);
         holder.bind(currentTrainingSession);
-        /*holder.textViewDate.setText(holder.textViewDate.getText() + new SimpleDateFormat("dd MMMM yyyy 'à' hh'h'mm").format(currentTrainingSession.getDate()));
-        holder.textViewAvailableSeats.setText(currentTrainingSession.availableSeat);
-
-        Drawable drawable = null;
-        if (currentTrainingSession.availableSeat > 0 && currentTrainingSession.availableSeat <= 2) {
-            drawable = this.context.getResources().getDrawable(R.drawable.warning, null);
-        }
-
-        if (currentTrainingSession.availableSeat <= 0) {
-            drawable = this.context.getResources().getDrawable(R.drawable.unavailable, null);
-        }
-
-        holder.imageViewStateIcon.setImageDrawable(drawable);
-
-
-        holder.btnInscrire.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View vi) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(vi.getContext());
-                builder.setTitle("Inscription")
-                        .setMessage("Voulez-vous vous inscrire?")
-                        .setPositiveButton("Oui", new DialogInterface.OnClickListener(){
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //TODO retrieve id and update the driving lesson with the user id
-
-                                //drivingLessonViewModel = ViewModelProviders.of(, viewModelFactory).get(DrivingLessonViewModel.class);
-                                //drivingLessonViewModel.inscription(userId, drivingLessonList.get(position).getDrivingLessonId());
-                                //Toast.makeText(vi.getContext(),"Inscription réussie" + trainingSessionsList.get(position).drivingLessonId, Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .setNegativeButton("Non", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
-                                Toast.makeText(vi.getContext(), "Inscription annulée", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                builder.create().show();
-
-
-            }
-        });*/
     }
 
     public void setTrainingSessions(List<TrainingSession> trainingSessions){
