@@ -13,24 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5677376f-2670-4f90-a1d2-a87551d562d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/AppDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/AppDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/DrivingLessonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/DrivingLessonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/DrivingLesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/DrivingLesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/Instructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/Instructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/TrainingSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/TrainingSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/UserTraining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/UserTraining.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/DrivingLessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/DrivingLessonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/DrivingLessonViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/DrivingLessonViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/component/ApplicationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/component/ApplicationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/MyDrivingLessonListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/MyDrivingLessonListFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/userManagement/UserSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/userManagement/UserSessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewMyDrivingLessonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewMyDrivingLessonAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewNextDrivingLessonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewNextDrivingLessonAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_driving_lesson_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_driving_lesson_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/my_driving_lesson_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_my_driving_lesson_list_item.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,10 +26,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="22bd1ddcbf0b7ece" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="22b4e15b38027ece" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -63,10 +53,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/NextDrivingLessonsListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="85">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewNextDrivingLessonAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,10 +74,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonAdapter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewMyDrivingLessonAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+            <state relative-caret-position="221">
+              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/MyDrivingLessonsListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,78 +95,48 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/DrivingLessonRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/userManagement/UserSessionManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/../build.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/../settings.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/training_sessions_list_item.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_next_driving_lessons_list.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_driving_lesson_list_item.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/app/Activity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="7333" selection-start-line="7333" selection-end-line="7333" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/RoomModule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="176" selection-start-line="176" selection-end-line="176" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/view/View.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7334" selection-start-line="7334" selection-end-line="7334" />
-            </state>
-          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -168,9 +146,10 @@
       <list>
         <option value="Interface" />
         <option value="navigationResourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -182,10 +161,37 @@
       <find>B</find>
       <find>getAvailableDrivingLessons</find>
       <find>getAll</find>
+      <find>action_loginPage_to_drivingLessonListFragment</find>
+      <find>login</find>
+      <find>drivingLesson</find>
+      <find>drivingLessonAdapter</find>
+      <find>MyDrivingLessonListFragment</find>
+      <find>driving_lesson_list_fragment</find>
+      <find>viewmodelfactory</find>
+      <find>DrivingLessonHolder</find>
+      <find>trainingSessionsList =</find>
+      <find>yyyy</find>
+      <find>Na</find>
+      <find>NavHostFra</find>
+      <find>Navigation.findNav</find>
+      <find>Navigation</find>
+      <find>trainingSessionsListRecyclerView</find>
+      <find>onPre</find>
+      <find>NextDrivingLessonsListFragment</find>
+      <find>datab</find>
+      <find>R.la</find>
+      <find>driving_lesson_list_item</find>
+      <find>FragmentDrivingLessonItemBinding</find>
+      <find>gradle.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="DG-login" />
+      </map>
+    </option>
   </component>
   <component name="HistoryComponent">
     <option name="urls">
@@ -195,65 +201,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/ListUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/ListUserFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/util/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/ListUserActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/ApplicationModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/InstructorDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/TrainingSessionDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/UserTrainingDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/TrainingSesssionViewModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/InstructorViewModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/UserTrainingViewModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/CustomViewModelFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/TrainingSessionList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/TrainingSessionListFragment.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/InstructorRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/TrainingSessionRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/UserTrainingRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/DatabaseModule.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/login_page.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/UserViewModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_login_page.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/driving_lesson_list_fragment.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/navigation/nav_graph.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/MyDrivingLessonAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/my_driving_lesson_list_fragment.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/RoomModule.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/driving_lesson_item.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/my_driving_lesson_item.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/MyDrivingLessonListFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/Instructor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/TrainingSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/UserTraining.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/DrivingLessonRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/component/ApplicationComponent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/RoomApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/DrivingLesson.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/DrivingLessonDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/DrivingLessonViewModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/AppDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/userManagement/UserSessionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/driving_lesson_list_fragment.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/navigation/nav_graph.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/ListViewAdapter/DrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/RecyclerViewAdapter/DrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/RecyclerViewAdapter/RecyclerViewDrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewDrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/MyDrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/MyDrivingLessonsListFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/driving_lesson_list_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/recyclerViewAdapter/RecyclerViewNextDrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/component/ApplicationComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_training_sessions_list.xml" />
+        <option value="$PROJECT_DIR$/build/generated/ap_generated_sources/debug/out/org/diiage/dtrqandroid/DataBinderMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/TrainingSessionViewModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/converters/TypeConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/converters/DateToStringConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/RoomApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/ApplicationModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/AppDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/converters/DateTypeConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/TrainingSession.java" />
+        <option value="$PROJECT_DIR$/src/main/res/menu/menu_baboon.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/menu/main_menu.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_training_sessions_tabs.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/TrainingSessionsTabsFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/viewPager/TrainingSessionsTabsFragmentPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/TrainingSessionsListFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/training_sessions_list_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/recyclerViewAdapter/RecyclerViewTrainingSessionsAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/NextDrivingLessonsListFragment.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.properties" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_driving_lesson_list_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewNextDrivingLessonAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewMyDrivingLessonAdapter.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="399" />
-    <option name="y" value="216" />
-    <option name="width" value="2403" />
-    <option name="height" value="1305" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="985" />
+    <option name="y" value="30" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -262,7 +268,22 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DTRQAndroid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DTRQNavigation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="DTRQAndroid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DTRQNavigation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -273,11 +294,6 @@
             <path>
               <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -291,134 +307,26 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="drivingLessons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="viewmodel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="di" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="di" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="di" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="userManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dtrqandroid" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="drivingLessons" type="462c0819:PsiDirectoryNode" />
+              <item name="recyclerViewAdapter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="navigation" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="DTRQAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
@@ -430,9 +338,12 @@
     <property name="DEBUGGABLE_DEVICE" value="samsung-sm_g960f-22bd1ddcbf0b7ece" />
     <property name="DEBUGGABLE_PROCESS" value="org.diiage.dtrqandroid" />
     <property name="DEBUGGER_ID" value="Auto" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="22b4e15b38027ece" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-11-18T07:45:37.044Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Properties" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -441,6 +352,11 @@
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="org.diiage.dtrqandroid.data.list" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.diiage.dtrqandroid.trainingSessions.recyclerViewAdapter" />
+      <recent name="org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter" />
+      <recent name="org.diiage.dtrqandroid.drivingLessons.ListViewAdapter" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -540,9 +456,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2148" height="1175" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
+      <window_info id="Structure" order="0" side_tool="true" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Build Variants" order="4" sideWeight="0.505176" side_tool="true" weight="0.28456375" />
+      <window_info id="Resources Explorer" order="5" sideWeight="0.49689442" weight="0.3295302" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49482402" visible="true" weight="0.24496645" />
+      <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="0" weight="0.32719547" />
+      <window_info anchor="bottom" id="Debug" order="1" weight="0.08595989" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41359773" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32981783" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32981783" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.22013423" side_tool="true" weight="0.48441926" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.7798658" visible="true" weight="0.31161472" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.32981783" />
+      <window_info anchor="bottom" id="Logcat" order="9" weight="0.1713881" />
+      <window_info anchor="right" id="Preview" order="0" weight="0.046308726" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.32998085" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
+    </layout>
+    <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -550,71 +492,49 @@
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.13314176" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.1637931" />
       <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32981783" />
-      <window_info anchor="bottom" id="Debug" order="1" weight="0.2674976" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41603467" />
+      <window_info anchor="bottom" id="Debug" order="1" weight="0.26845637" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41706616" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32981783" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32981783" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32981783" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5004789" side_tool="true" weight="0.32981783" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49952108" weight="0.32694152" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49952108" visible="true" weight="0.29146692" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32981783" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="9" visible="true" weight="0.3739214" />
+      <window_info anchor="bottom" id="Logcat" order="9" weight="0.32981783" />
       <window_info anchor="right" id="Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.32998085" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java</url>
-          <line>69</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/CustomViewModelFactory.java</url>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/DrivingLessonViewModel.java</url>
-          <line>22</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/TrainingSessionViewModel.java</url>
+          <line>17</line>
           <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java</url>
-          <line>72</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/TrainingSessionsListFragment.java</url>
+          <line>56</line>
           <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/userManagement/UserSessionManager.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonAdapter.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="52" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="app">
-        <watch expression="sessions" language="JAVA" />
-        <watch expression="drivingLessonViewModel.getAllDrivingLessons()" language="JAVA" />
-        <watch expression="adapter.setDrivingLessons(sessions)" language="JAVA" />
-        <watch expression="username.toString()" language="JAVA" />
-        <watch expression="userViewModel.getUserByUsername(username,password)" language="JAVA" />
-        <watch expression="userViewModel.getUserByUsername(username,password).getValue()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -651,418 +571,347 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-v24/ic_launcher_foreground.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-runtime/2.1.0/70f29099a9d448c5628873c0314d133e9de7fdf3/navigation-runtime-2.1.0-sources.jar!/androidx/navigation/NavController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/MyDrivingLessonListFragment.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/DatabaseInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/ApplicationContext.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/viewPager/DrivingLessonsTabsFragmentPagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="788" selection-start-line="788" selection-end-line="788" />
+        <state relative-caret-position="284">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_my_driving_lesson_list_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_login_page.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/nav_graph.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="nav-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/driving_lesson_list_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/my_driving_lesson_list_fragment.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="52" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.room/room-runtime/2.0.0/facd00ec4680f68f277a5de6c6a816471fe28aba/room-runtime-2.0.0-sources.jar!/androidx/room/RoomDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="237" selection-start-line="237" selection-end-line="237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/generated/ap_generated_sources/debug/out/org/diiage/dtrqandroid/data/db/dao/UserDao_Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/Instructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/InstructorRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/TrainingSessionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/UserTrainingRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/UserTraining.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding>
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/InstructorViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/TrainingSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/my_driving_lesson_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="431">
           <caret line="81" column="47" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="47" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/DatabaseInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/component/ApplicationComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/CustomViewModelFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="153">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/DatabaseModule.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-extensions/2.0.0/ec7ad4a5233eab676f8fad210d18eb343cde5974/lifecycle-extensions-2.0.0-sources.jar!/androidx/lifecycle/ViewModelProviders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="153">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/FragmentManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="1698" selection-start-line="1698" selection-end-line="1698" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/view/Choreographer.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_my_driving_lessons_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/generated/ap_generated_sources/debug/out/org/diiage/dtrqandroid/databinding/TrainingSessionsListItemBindingImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/TrainingSessionViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/Instructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/converters/TypeConverter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/converters/DateToStringConverter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/ApplicationModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/DrivingLesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/TrainingSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/generated/ap_generated_sources/debug/out/org/diiage/dtrqandroid/DataBinderMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/RoomApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/AppDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/converters/DateTypeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/menu/menu_baboon.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/res/menu/main_menu.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/nav_graph.xml">
+      <provider selected="true" editor-type-id="nav-designer" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="62" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/home/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/ApplicationModule.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_training_sessions_tabs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="69">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/DrivingLessonsTabsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/viewPager/TrainingSessionsTabsFragmentPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/TrainingSessionsTabsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_training_sessions_list.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-734">
+          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/InstructorDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/UserTrainingDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/UserViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="79" selection-start-line="22" selection-start-column="79" selection-end-line="22" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/MyDrivingLessonAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/driving_lesson_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="80" column="56" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="56" />
+          <caret line="12" column="66" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="66" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="2612" selection-start-line="2612" selection-end-line="2612" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/FragmentManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="2102" selection-start-line="2102" selection-end-line="2102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/dao/DrivingLessonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/DrivingLesson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/DrivingLessonViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/component/ApplicationComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/RoomApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/MyDrivingLessonListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/ApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/AppDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="128" selection-start-line="27" selection-start-column="128" selection-end-line="27" selection-end-column="128" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/os/AsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="332" selection-start-line="332" selection-end-line="332" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/generated/ap_generated_sources/debug/out/org/diiage/dtrqandroid/data/db/dao/DrivingLessonDao_Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/di/module/RoomModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/view/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7334" selection-start-line="7334" selection-end-line="7334" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/repository/DrivingLessonRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="11577">
+          <caret line="786" column="34" selection-start-line="786" selection-start-column="34" selection-end-line="786" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/TrainingSessionsListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/trainingSessions/recyclerViewAdapter/RecyclerViewTrainingSessionsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/db/viewmodel/CustomViewModelFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/NextDrivingLessonsListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/training_sessions_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_next_driving_lessons_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_driving_lesson_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/app/Activity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/MyDrivingLessonsListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="7333" selection-start-line="7333" selection-end-line="7333" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.0.0/c158207594782b42f3a2e08a5a029eb3319e4404/lifecycle-livedata-core-2.0.0-sources.jar!/androidx/lifecycle/LiveData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="e#3663#3977#0" expanded="true" />
-            <element signature="e#3976#3977#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/userManagement/UserSessionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="1207">
+          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonListFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewNextDrivingLessonAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="184">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/data/list/DrivingLessonAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/diiage/dtrqandroid/drivingLessons/recyclerViewAdapter/RecyclerViewMyDrivingLessonAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>

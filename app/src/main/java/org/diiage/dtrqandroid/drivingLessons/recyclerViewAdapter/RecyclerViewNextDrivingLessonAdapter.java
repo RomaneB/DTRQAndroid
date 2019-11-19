@@ -2,24 +2,24 @@ package org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
-import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
+
 import org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
-import org.diiage.dtrqandroid.databinding.FragmentDrivingLessonItemBinding;
+import org.diiage.dtrqandroid.databinding.FragmentDrivingLessonListItemBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
 import javax.inject.Inject;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<RecyclerViewNextDrivingLessonAdapter.DrivingLessonHolder> {
     @Inject
@@ -31,7 +31,7 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     private Context context;
     private Long userId;
     private Consumer onClickButton;
-    private FragmentDrivingLessonItemBinding binding;
+    private FragmentDrivingLessonListItemBinding binding;
 
     public RecyclerViewNextDrivingLessonAdapter(Consumer<DrivingLessonWithInstructor> onClickButton, Fragment fragment, Context context, List<DrivingLessonWithInstructor> drivingLessons){
         this.onClickButton = onClickButton;
@@ -46,7 +46,7 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     @NonNull
     @Override
     public DrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding = FragmentDrivingLessonItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
+        FragmentDrivingLessonListItemBinding fragmentDrivingLessonItemBinding = FragmentDrivingLessonListItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return new DrivingLessonHolder(fragmentDrivingLessonItemBinding);
     }
 
@@ -68,15 +68,17 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     }
 
     class DrivingLessonHolder extends RecyclerView.ViewHolder{
+        public DrivingLessonHolder(@NonNull View itemView) {
+            super(itemView);
+        }
 
-        private FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding;
+        private FragmentDrivingLessonListItemBinding fragmentDrivingLessonItemBinding;
 
-        public DrivingLessonHolder(FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding){
+        public DrivingLessonHolder(FragmentDrivingLessonListItemBinding fragmentDrivingLessonItemBinding){
             super(fragmentDrivingLessonItemBinding.getRoot());
             this.fragmentDrivingLessonItemBinding = fragmentDrivingLessonItemBinding;
-
-
         }
+
         public void bind(DrivingLessonWithInstructor drivingLesson){
             fragmentDrivingLessonItemBinding.setDrivingLesson(drivingLesson);
             fragmentDrivingLessonItemBinding.setConsumer(onClickButton);

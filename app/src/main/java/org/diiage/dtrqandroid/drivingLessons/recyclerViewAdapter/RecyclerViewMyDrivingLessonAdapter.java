@@ -2,25 +2,18 @@ package org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-
-import org.diiage.dtrqandroid.R;
-import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
-import org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor;
-import org.diiage.dtrqandroid.databinding.FragmentDrivingLessonItemBinding;
-import org.diiage.dtrqandroid.databinding.FragmentMyDrivingLessonItemBinding;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor;
+import org.diiage.dtrqandroid.databinding.FragmentMyDrivingLessonListItemBinding;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
 
 public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<RecyclerViewMyDrivingLessonAdapter.MyDrivingLessonHolder> {
     private List<DrivingLessonWithInstructor> myDrivingLessonList = new ArrayList<>();
@@ -39,7 +32,7 @@ public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<Rec
     @NonNull
     @Override
     public MyDrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        FragmentMyDrivingLessonItemBinding fragmentMyDrivingLessonItemBinding = FragmentMyDrivingLessonItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        FragmentMyDrivingLessonListItemBinding fragmentMyDrivingLessonItemBinding = FragmentMyDrivingLessonListItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new MyDrivingLessonHolder(fragmentMyDrivingLessonItemBinding);
     }
 
@@ -60,10 +53,9 @@ public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<Rec
     }
 
     class MyDrivingLessonHolder extends RecyclerView.ViewHolder{
+        private FragmentMyDrivingLessonListItemBinding fragmentMyDrivingLessonItemBinding;
 
-        private FragmentMyDrivingLessonItemBinding fragmentMyDrivingLessonItemBinding;
-
-        public MyDrivingLessonHolder(FragmentMyDrivingLessonItemBinding fragmentMyDrivingLessonItemBinding){
+        public MyDrivingLessonHolder(FragmentMyDrivingLessonListItemBinding fragmentMyDrivingLessonItemBinding){
             super(fragmentMyDrivingLessonItemBinding.getRoot());
             this.fragmentMyDrivingLessonItemBinding = fragmentMyDrivingLessonItemBinding;
 

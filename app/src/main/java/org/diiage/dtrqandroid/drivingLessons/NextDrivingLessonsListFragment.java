@@ -2,25 +2,19 @@ package org.diiage.dtrqandroid.drivingLessons;
 
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
-import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 import org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
-import org.diiage.dtrqandroid.databinding.FragmentDrivingLessonItemBinding;
 import org.diiage.dtrqandroid.databinding.FragmentNextDrivingLessonsListBinding;
 import org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter.RecyclerViewNextDrivingLessonAdapter;
-import org.diiage.dtrqandroid.generated.callback.OnClickListener;
 
 import javax.inject.Inject;
 
@@ -108,7 +102,7 @@ public class NextDrivingLessonsListFragment extends Fragment {
 
                         drivingLessonViewModel = ViewModelProviders.of(getActivity() , viewModelFactory).get(DrivingLessonViewModel.class);
                         drivingLessonViewModel.registrer(userId,  drivingLesson.getDrivingLessonId());
-                        Toast.makeText(getContext(),"Inscription réussie" + drivingLesson.drivingLessonId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(),"Inscription réussie", Toast.LENGTH_SHORT).show();
                     })
                     .setNegativeButton("Non", (dialog, which) -> {
                         Toast.makeText(getContext(), "Inscription annulée", Toast.LENGTH_SHORT).show();
