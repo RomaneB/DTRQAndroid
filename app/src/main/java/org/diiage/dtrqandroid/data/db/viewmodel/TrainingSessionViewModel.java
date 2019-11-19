@@ -6,18 +6,22 @@ import org.diiage.dtrqandroid.data.db.repository.TrainingSessionRepository;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
-public class TrainingSesssionViewModel extends ViewModel {
+public class TrainingSessionViewModel extends ViewModel {
 
     private TrainingSessionRepository trainingSessionRepository;
 
-    public TrainingSesssionViewModel (TrainingSessionRepository trainingSessionRepository) {
+    public TrainingSessionViewModel(TrainingSessionRepository trainingSessionRepository) {
 
         this.trainingSessionRepository = trainingSessionRepository;
+
     }
 
-   LiveData<List<TrainingSession>> getAllTrainingSessions() { return trainingSessionRepository.getAllTrainingSessions();}
+    public LiveData<List<TrainingSession>> getAllTrainingSessions() {
+        return trainingSessionRepository.getAllTrainingSessions();
+    }
 
     public void insert(TrainingSession trainingSession) { trainingSessionRepository.insert(trainingSession);}
 }
