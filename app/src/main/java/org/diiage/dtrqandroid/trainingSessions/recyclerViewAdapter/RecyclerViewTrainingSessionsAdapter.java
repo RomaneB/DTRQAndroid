@@ -23,7 +23,7 @@ import org.diiage.dtrqandroid.data.db.entity.TrainingSession;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.db.viewmodel.TrainingSessionViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
-import org.diiage.dtrqandroid.databinding.FragmentTrainingSessionsListItemBinding;
+import org.diiage.dtrqandroid.databinding.TrainingSessionsListItemBinding;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -53,7 +53,7 @@ public class RecyclerViewTrainingSessionsAdapter extends RecyclerView.Adapter<Re
     @Override
     public TrainingSessionHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        Trai itemBinding = TrainingSessionsListItemBinding.inflate(layoutInflater, parent, false);
+        TrainingSessionsListItemBinding itemBinding = TrainingSessionsListItemBinding.inflate(layoutInflater, parent, false);
 
         return new TrainingSessionHolder(itemBinding);
     }
