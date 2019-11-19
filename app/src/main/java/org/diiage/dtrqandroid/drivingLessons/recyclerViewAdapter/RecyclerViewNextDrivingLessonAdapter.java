@@ -1,23 +1,18 @@
 package org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
+import org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
+import org.diiage.dtrqandroid.databinding.FragmentDrivingLessonItemBinding;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import javax.inject.Inject;
 
@@ -29,70 +24,41 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<RecyclerViewNextDrivingLessonAdapter.DrivingLessonHolder> {
     @Inject
     ViewModelProvider.Factory viewModelFactory;
-    private List<DrivingLesson> drivingLessonList = new ArrayList<>();
+    private List<DrivingLessonWithInstructor> drivingLessonList = new ArrayList<>();
     private DrivingLessonViewModel drivingLessonViewModel;
     UserSessionManager session;
     private Fragment fragment;
     private Context context;
     private Long userId;
+    private Consumer onClickButton;
+    private FragmentDrivingLessonItemBinding binding;
 
-    public RecyclerViewNextDrivingLessonAdapter(Fragment fragment, Context context){
-        fragment = fragment;
-        context = context;
-        session = new UserSessionManager(context);
-        userId = session.getUserId();
+    public RecyclerViewNextDrivingLessonAdapter(Consumer<DrivingLessonWithInstructor> onClickButton, Fragment fragment, Context context, List<DrivingLessonWithInstructor> drivingLessons){
+        this.onClickButton = onClickButton;
+        this.fragment = fragment;
+        this.context = context;
+        this.drivingLessonList = drivingLessons;
+        this.setDrivingLessons(drivingLessons);
+
+
     }
 
     @NonNull
     @Override
     public DrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_driving_lesson_item,parent, false);
-
-
-        return new DrivingLessonHolder(itemView);
+        FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding = FragmentDrivingLessonItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
+        return new DrivingLessonHolder(fragmentDrivingLessonItemBinding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull DrivingLessonHolder holder, int position) {
-        DrivingLesson currentDrivingLesson = drivingLessonList.get(position);
-        holder.textViewDate.setText(holder.textViewDate.getText() + new SimpleDateFormat("dd MMMM yyyy 'à' hh'h'mm").format(currentDrivingLesson.getDate())); // simpledate format
-        holder.textViewText.setText(currentDrivingLesson.getText());
-
-
-        holder.btnInscrire.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View vi) {
-                String test ="test";
-                final AlertDialog.Builder builder = new AlertDialog.Builder(vi.getContext());
-                builder.setTitle("Inscription")
-                        .setMessage("Voulez-vous vous inscrire?")
-                        .setPositiveButton("Oui", new DialogInterface.OnClickListener(){
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //TODO retrieve id and update the driving lesson with the user id
-                                /*
-                                drivingLessonViewModel = ViewModelProviders.of(, viewModelFactory).get(DrivingLessonViewModel.class);
-                                drivingLessonViewModel.inscription(userId, drivingLessonList.get(position).getDrivingLessonId());*/
-                                Toast.makeText(vi.getContext(),"Inscription réussie" + drivingLessonList.get(position).drivingLessonId, Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .setNegativeButton("Non", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
-                                Toast.makeText(vi.getContext(), "Inscription annulée", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                builder.create().show();
-
-
-            }
-        });
+        DrivingLessonWithInstructor currentDrivingLesson = drivingLessonList.get(position);
+        holder.bind(currentDrivingLesson);
     }
 
-    public void setDrivingLessons(List<DrivingLesson> drivingLessons){
+    public void setDrivingLessons(List<DrivingLessonWithInstructor> drivingLessons){
         this.drivingLessonList = drivingLessons;
+
         notifyDataSetChanged();
     }
 
@@ -102,17 +68,19 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     }
 
     class DrivingLessonHolder extends RecyclerView.ViewHolder{
-        private TextView textViewDate;
-        private TextView textViewText;
-        private Button btnInscrire;
 
-        public DrivingLessonHolder(View itemView){
-            super(itemView);
-            textViewDate = itemView.findViewById(R.id.date_lesson);
-            textViewText = itemView.findViewById(R.id.text_driving);
-            btnInscrire = itemView.findViewById(R.id.btnInscrire);
+        private FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding;
+
+        public DrivingLessonHolder(FragmentDrivingLessonItemBinding fragmentDrivingLessonItemBinding){
+            super(fragmentDrivingLessonItemBinding.getRoot());
+            this.fragmentDrivingLessonItemBinding = fragmentDrivingLessonItemBinding;
 
 
+        }
+        public void bind(DrivingLessonWithInstructor drivingLesson){
+            fragmentDrivingLessonItemBinding.setDrivingLesson(drivingLesson);
+            fragmentDrivingLessonItemBinding.setConsumer(onClickButton);
+            fragmentDrivingLessonItemBinding.executePendingBindings();
         }
     }
 }

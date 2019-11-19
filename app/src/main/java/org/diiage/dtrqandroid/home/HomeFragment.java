@@ -4,7 +4,10 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +47,25 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+       //inflater.inflate(R.layout.fragment_home, container, false).findViewById(R.id.btnGoToDriving).setOnClickListener(v -> Navigation.findNavController(this.getView()).navigate(R.id.driving_lessons_tabs_fragment));
+
+
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
+    public void goToSession(View view){
+
+        Navigation.findNavController(view).navigate(R.id.driving_lessons_tabs_fragment);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+       view.findViewById(R.id.btnGoToDriving).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.driving_lessons_tabs_fragment));
+
+        view.findViewById(R.id.btnGoToTraining).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.training_sessions_tabs_fragment));
     }
 }

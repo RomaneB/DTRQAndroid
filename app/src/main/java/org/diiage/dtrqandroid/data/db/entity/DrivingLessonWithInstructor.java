@@ -3,38 +3,28 @@ package org.diiage.dtrqandroid.data.db.entity;
 import java.util.Date;
 
 import androidx.annotation.NonNull;
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-import androidx.room.TypeConverters;
 
-@Entity(tableName = "drivingLesson")
-    public class DrivingLesson {
-
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "drivingLessonId")
+public class DrivingLessonWithInstructor {
     public long drivingLessonId;
 
-    @ColumnInfo(name = "date")
-    @TypeConverters({DateTypeConverter.class})
     public Date date;
 
-    @ColumnInfo(name = "text")
     public String text;
 
-    @ColumnInfo(name = "instructorId")
     public long instructorId;
-
-    @ColumnInfo(name = "userId")
+    public String lastName;
+    public String firstName;
     public long userId;
 
-    public DrivingLesson(@NonNull long drivingLessonId, @NonNull Date  date, String text, long instructorId, long userId)
+    public DrivingLessonWithInstructor(@NonNull long drivingLessonId, @NonNull Date  date, String text, long instructorId, long userId, String lastName, String firstName)
     {
         this.drivingLessonId = drivingLessonId;
         this.date = date;
         this.text = text;
         this.instructorId = instructorId;
         this.userId = userId;
+        this.lastName = lastName;
+        this.firstName = firstName;
     }
 
     public long getDrivingLessonId() {
@@ -65,16 +55,31 @@ import androidx.room.TypeConverters;
         return instructorId;
     }
 
-    public void setInstructorId(int instructorId) {
+    public void setInstructorId(long instructorId) {
         this.instructorId = instructorId;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
-
 }

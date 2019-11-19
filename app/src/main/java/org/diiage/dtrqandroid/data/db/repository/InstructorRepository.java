@@ -21,6 +21,9 @@ public class InstructorRepository {
         return instructorDao.getAllInstructors();
     }
 
+    public LiveData<Instructor> getInstructoById(Long instructorId){
+        return instructorDao.getInstructorById(instructorId);
+    }
     public void insert(Instructor instructor) {
         instructorDao.insert(instructor);
     }

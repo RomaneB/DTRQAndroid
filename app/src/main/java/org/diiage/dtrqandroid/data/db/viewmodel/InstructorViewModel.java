@@ -20,5 +20,7 @@ public class InstructorViewModel extends ViewModel {
 
     LiveData<List<Instructor>> getAllInstructors() { return instructorRepository.getAllAllInstructors();}
 
+    LiveData<Instructor> getInstructorById(Long instructorId) {return instructorRepository.getInstructoById(instructorId);}
+
     public void insert(Instructor instructor) { instructorRepository.insert(instructor);}
 }

@@ -7,4 +7,7 @@
     <item
         android:id="@+id/btn_training_sessions"
         android:title="Sessions d'entraînement" />
+    <item
+        android:id="@+id/btn_logout"
+        android:title="Se déconnecter" />
 </menu>
