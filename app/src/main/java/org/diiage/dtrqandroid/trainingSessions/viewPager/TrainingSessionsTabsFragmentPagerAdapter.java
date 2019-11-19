@@ -1,4 +1,4 @@
-package org.diiage.dtrqandroid.trainingSessions.ViewPager;
+package org.diiage.dtrqandroid.trainingSessions.viewPager;
 
 import android.content.Context;
 

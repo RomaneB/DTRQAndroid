@@ -8,18 +8,35 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="drivingLessonListFragment">
+                  <entry key="driving_lessons_tabs_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-249" />
-                            <option name="y" value="24" />
+                            <option name="x" value="679" />
+                            <option name="y" value="-65" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="home_fragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="371" />
+                            <option name="y" value="82" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_drivingLessonListFragment_to_myDrivingLessonListFragment">
+                            <entry key="action_homeFragment_to_drivingLessonsTabsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_home_fragment_to_trainingSessionsTabsFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -34,13 +51,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-507" />
-                            <option name="y" value="27" />
+                            <option name="x" value="-7" />
+                            <option name="y" value="101" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_loginPage_to_drivingLessonListFragment">
+                            <entry key="action_loginPage_to_home_fragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -50,13 +67,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="myDrivingLessonListFragment">
+                  <entry key="training_sessions_tabs_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="27" />
-                            <option name="y" value="31" />
+                            <option name="x" value="615" />
+                            <option name="y" value="396" />
                           </Point>
                         </option>
                       </LayoutPositions>

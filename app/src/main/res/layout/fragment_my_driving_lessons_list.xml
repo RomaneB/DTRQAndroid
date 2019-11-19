@@ -9,5 +9,5 @@
         android:id="@+id/myDrivingLessonRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/fragment_my_driving_lesson_item" />
+        tools:listitem="@layout/my_driving_lesson_list_item" />
 </LinearLayout>

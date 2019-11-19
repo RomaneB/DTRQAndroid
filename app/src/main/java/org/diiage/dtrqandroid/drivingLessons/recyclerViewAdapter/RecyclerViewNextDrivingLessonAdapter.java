@@ -46,7 +46,7 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
     @NonNull
     @Override
     public DrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_driving_lesson_item,parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.driving_lesson_list_item,parent, false);
 
 
         return new DrivingLessonHolder(itemView);
@@ -62,7 +62,6 @@ public class RecyclerViewNextDrivingLessonAdapter extends RecyclerView.Adapter<R
         holder.btnInscrire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View vi) {
-                String test ="test";
                 final AlertDialog.Builder builder = new AlertDialog.Builder(vi.getContext());
                 builder.setTitle("Inscription")
                         .setMessage("Voulez-vous vous inscrire?")

@@ -8,6 +8,8 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
+import org.diiage.dtrqandroid.data.converters.DateTypeConverter;
+
 @Entity(tableName = "drivingLesson")
 public class DrivingLesson {
 

@@ -23,7 +23,7 @@ public class RecyclerViewMyDrivingLessonAdapter extends RecyclerView.Adapter<Rec
     @NonNull
     @Override
     public MyDrivingLessonHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_my_driving_lesson_item,parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_driving_lesson_list_item,parent, false);
         return new MyDrivingLessonHolder(itemView);
     }
 

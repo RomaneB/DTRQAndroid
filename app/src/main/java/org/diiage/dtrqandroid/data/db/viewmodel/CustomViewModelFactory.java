@@ -36,8 +36,8 @@ public class CustomViewModelFactory implements ViewModelProvider.Factory {
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
         if (modelClass.isAssignableFrom(DrivingLessonViewModel.class))
             return (T) new DrivingLessonViewModel(drivingLessonRepository);
-        else  if (modelClass.isAssignableFrom(TrainingSesssionViewModel.class))
-            return (T) new TrainingSesssionViewModel(trainingSessionRepository);
+        else  if (modelClass.isAssignableFrom(TrainingSessionViewModel.class))
+            return (T) new TrainingSessionViewModel(trainingSessionRepository);
         else  if (modelClass.isAssignableFrom(InstructorViewModel.class))
             return (T) new InstructorViewModel(instructorRepository);
         else  if (modelClass.isAssignableFrom(UserTrainingViewModel.class))
