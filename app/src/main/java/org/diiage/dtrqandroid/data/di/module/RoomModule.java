@@ -198,7 +198,7 @@ public class RoomModule {
 
                 DrivingLesson d1 = null;
                 try {
-                    d1 = new DrivingLesson(1, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-21 12:00:00"), "Driving de Patatana", 1,4);
+                    d1 = new DrivingLesson(1, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-20 12:00:00"), "Driving de Patatana", 1,4);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -219,11 +219,49 @@ public class RoomModule {
                 drivingLessonDao.insert(d3);
                 DrivingLesson d4 = null;
                 try {
-                    d4 = new DrivingLesson(4, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-08 12:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,0);
+                    d4 = new DrivingLesson(4, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2020-12-08 12:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,0);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
                 drivingLessonDao.insert(d4);
+
+                DrivingLesson d5 = null;
+                try {
+                    d5 = new DrivingLesson(5, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-19 14:00:00"), "Driving de Patatana", 1,4);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                drivingLessonDao.insert(d5);
+
+                DrivingLesson d6 = null;
+                try {
+                    d6 = new DrivingLesson(6, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-20 10:00:00"), "Driving de Patatana", 1,4);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                drivingLessonDao.insert(d6);
+
+                DrivingLesson d7 = null;
+                try {
+                    d7 = new DrivingLesson(7, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2020-02-10 10:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,0);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                drivingLessonDao.insert(d7);
+                DrivingLesson d8 = null;
+                try {
+                    d8 = new DrivingLesson(8, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2020-01-08 16:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,0);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                drivingLessonDao.insert(d8);
+                DrivingLesson d9 = null;
+                try {
+                    d9 = new DrivingLesson(9, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-20 17:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 1,0);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                drivingLessonDao.insert(d9);
 
                 TrainingSession t1 = null;
                 try {

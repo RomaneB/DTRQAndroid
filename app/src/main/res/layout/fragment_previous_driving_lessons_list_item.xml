@@ -4,7 +4,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
+<data>
+    <variable
+        name="drivingLesson"
+        type="org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor" />
+    <variable
+        name="consumer"
+        type="java.util.function.Consumer" />
+</data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="TextView"
+                android:text="@{drivingLesson.date.toString()}"
                 app:layout_constraintBottom_toTopOf="@+id/guideline4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -49,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="TextView"
+                android:text="@{drivingLesson.firstName +` ` + drivingLesson.lastName}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline4" />
@@ -72,7 +79,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="@{() -> consumer.accept(drivingLesson)}"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

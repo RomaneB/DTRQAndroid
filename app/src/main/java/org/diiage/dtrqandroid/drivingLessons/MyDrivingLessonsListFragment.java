@@ -39,7 +39,6 @@ public class MyDrivingLessonsListFragment extends Fragment {
     private DrivingLessonViewModel myDrivingLessonViewModel;
     private  FragmentMyDrivingLessonsListBinding binding;
 
-
     private Long userId;
 
     private RecyclerView recyclerView;
@@ -122,7 +121,5 @@ public class MyDrivingLessonsListFragment extends Fragment {
                     });
             builder.create().show();
         }
-
-
     }
 }

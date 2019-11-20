@@ -18,7 +18,6 @@ public class DrivingLessonViewModel extends ViewModel {
 
     //private DrivingLesson drivingLesson;
 
-
     private DrivingLessonRepository drivingLessonRepository;
     private UserRepository userRepository;
     //private LiveData<String> userName;
