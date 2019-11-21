@@ -21,13 +21,13 @@ public interface TrainingSessionDao {
             "ORDER BY date")
     LiveData<List<TrainingSession>> getAvailableTrainingSessions(long userId);
 
-    @Query("SELECT * FROM trainingsession INNER JOIN user_training ON trainingSession.trainingSessionId = user_training.trainingId WHERE userId = :userId AND date(datetime(date / 1000 , 'unixepoch')) < date('now') ORDER BY date")
+    @Query("SELECT * FROM trainingsession INNER JOIN user_training ON trainingSession.trainingSessionId = user_training.trainingId WHERE userId = :userId AND date(datetime(date / 1000 , 'unixepoch')) < date('now') ORDER BY date DESC")
     LiveData<List<TrainingSessionWithUser>> getPastTrainingSessions(long userId);
 
     @Insert
     void insert(TrainingSession trainingSession);
 
-    @Query("SELECT * FROM trainingsession JOIN user_training ON trainingSessionId=trainingId WHERE userId= :userId")
+    @Query("SELECT * FROM trainingsession JOIN user_training ON trainingSessionId=trainingId WHERE userId= :userId ORDER BY date")
     LiveData<List<TrainingSession>> getTrainingSessionByUserId(long userId);
 
     @Query("UPDATE trainingsession SET availableSeat= availableSeat+1 WHERE trainingSessionId= :trainingSessionId")
