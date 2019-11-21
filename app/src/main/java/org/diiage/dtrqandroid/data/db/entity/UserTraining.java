@@ -26,10 +26,9 @@ public class UserTraining {
     @ColumnInfo(name = "score")
     public int score;
 
-    public UserTraining(@NonNull long userTrainingId, @NonNull long userId, @NonNull long trainingId, int score){
+    public UserTraining(@NonNull long userId, @NonNull long trainingId, int score){
         this.trainingId = trainingId;
         this.userId = userId;
-        this.userTrainingId = userTrainingId;
         this.score = score;
     }
 

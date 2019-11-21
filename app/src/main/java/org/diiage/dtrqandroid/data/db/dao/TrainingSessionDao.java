@@ -17,13 +17,16 @@ public interface TrainingSessionDao {
 
     @Query("SELECT * FROM trainingSession " +
             "WHERE date(datetime(date / 1000 , 'unixepoch')) > date('now') " +
-            "AND availableSeat > 0 " +
+            "AND availableSeat > 0 AND trainingSessionId NOT IN (SELECT trainingId FROM user_training WHERE userId = :userId) " +
             "ORDER BY date")
-    LiveData<List<TrainingSession>> getAvailableTrainingSessions();
+    LiveData<List<TrainingSession>> getAvailableTrainingSessions(long userId);
 
     @Query("SELECT * FROM trainingsession INNER JOIN user_training ON trainingSession.trainingSessionId = user_training.trainingId WHERE userId = :userId AND date(datetime(date / 1000 , 'unixepoch')) < date('now') ORDER BY date")
     LiveData<List<TrainingSessionWithUser>> getPastTrainingSessions(long userId);
 
     @Insert
     void insert(TrainingSession trainingSession);
+
+    @Query("UPDATE trainingSession SET availableSeat = availableSeat - 1 WHERE trainingSessionId = :traininSessionId")
+    void inscriptionTrainingSessions(long traininSessionId);
 }

@@ -22,12 +22,16 @@ public class TrainingSessionViewModel extends ViewModel {
         return trainingSessionRepository.getAllTrainingSessions();
     }
 
-    public LiveData<List<TrainingSession>> getAvailableTrainingSessions(){
-        return trainingSessionRepository.getAvailableTrainingSessions();
+    public LiveData<List<TrainingSession>> getAvailableTrainingSessions(long userId){
+        return trainingSessionRepository.getAvailableTrainingSessions(userId);
     }
 
     public LiveData<List<TrainingSessionWithUser>> getPastTrainingSessions(long userId) {
         return trainingSessionRepository.getPastTrainingSessions(userId);
+    }
+
+    public void inscriptionTrainingSessions(long traininSessionId){
+        trainingSessionRepository.inscriptionTrainingSessions(traininSessionId);
     }
 
     public void insert(TrainingSession trainingSession) { trainingSessionRepository.insert(trainingSession);}
