@@ -23,8 +23,9 @@ public class UserTrainingRepository {
         return userTrainingDao.getAllUserTrainings();
     }
 
-    public void insert(UserTraining userTraining) {
-        userTrainingDao.insert(userTraining);
+    public void insert(UserTraining userTraining)
+    {
+        Executors.newSingleThreadExecutor().execute(() -> userTrainingDao.insert(userTraining));
     }
 
 

@@ -10,6 +10,7 @@ import org.diiage.dtrqandroid.drivingLessons.MyDrivingLessonsListFragment;
 import org.diiage.dtrqandroid.drivingLessons.NextDrivingLessonsListFragment;
 import org.diiage.dtrqandroid.drivingLessons.PreviousDrivingLessonsListFragment;
 import org.diiage.dtrqandroid.trainingSessions.MyTrainingSessionsListFragment;
+import org.diiage.dtrqandroid.trainingSessions.PastTrainingSessionsListFragment;
 import org.diiage.dtrqandroid.trainingSessions.TrainingSessionsListFragment;
 
 import javax.inject.Singleton;
@@ -29,6 +30,7 @@ public interface ApplicationComponent {
     void inject (TrainingSessionsListFragment trainingSessionsListFragment);
     void inject (PreviousDrivingLessonsListFragment previousDrivingLessonsListFragment);
     void inject (MyTrainingSessionsListFragment myTrainingSessionsListFragment);
+    void inject (PastTrainingSessionsListFragment pastTrainingSessionsListFragment);
 
     Application getApplication();
 

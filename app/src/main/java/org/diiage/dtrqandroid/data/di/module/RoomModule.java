@@ -24,6 +24,7 @@ import org.diiage.dtrqandroid.data.db.viewmodel.CustomViewModelFactory;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.inject.Singleton;
@@ -49,9 +50,9 @@ public class RoomModule {
 
     ///////////// USER /////////
     /// Provides the repository ////
-   @Provides
+    @Provides
     @Singleton
-   UserRepository provideUserRepository(UserDao userDao){
+    UserRepository provideUserRepository(UserDao userDao){
 
         return new UserRepository(userDao);
     }
@@ -128,7 +129,7 @@ public class RoomModule {
 
 
 
-   @Provides
+    @Provides
     @Singleton
     ViewModelProvider.Factory provideViewModelFactory(
             UserRepository userRepository,
@@ -136,13 +137,13 @@ public class RoomModule {
             DrivingLessonRepository drivingLessonRepository,
             InstructorRepository instructorRepository,
             UserTrainingRepository userTrainingRepository
-   ){
+    ){
         return new CustomViewModelFactory(
-                        drivingLessonRepository,
-                        instructorRepository,
-                        trainingSessionRepository,
-                        userRepository,
-                        userTrainingRepository
+                drivingLessonRepository,
+                instructorRepository,
+                trainingSessionRepository,
+                userRepository,
+                userTrainingRepository
         );
     }
 
@@ -158,14 +159,14 @@ public class RoomModule {
 
         private final UserDao userDao;
         private final DrivingLessonDao drivingLessonDao;
-       private final TrainingSessionDao trainingSessionDao;
+        private final TrainingSessionDao trainingSessionDao;
         private final InstructorDao instructorDao;
         private final UserTrainingDao userTrainingDao;
 
         PopulateDbAsync(AppDatabase db) {
             userDao = db.userDao();
             drivingLessonDao = db.drivingLessonDao();
-           trainingSessionDao = db.trainingSessionDao();
+            trainingSessionDao = db.trainingSessionDao();
             instructorDao = db.instructorDao();
             userTrainingDao = db.userTrainingDao();
 
@@ -285,11 +286,35 @@ public class RoomModule {
                 }
                 trainingSessionDao.insert(t3);
 
-                UserTraining ut1 = new UserTraining(1, 4, 1, 0);
+                TrainingSession t4 = null;
+                try{
+                    t4 = new TrainingSession(4, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-12-15 14:00:00"), 5);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t4);
+
+                TrainingSession t5 = null;
+                try{
+                    t5 = new TrainingSession(5, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-12-15 14:00:00"), 5);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t5);
+
+                TrainingSession t6 = null;
+                try{
+                    t6 = new TrainingSession(6, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-25 16:00:00"), 5);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t6);
+
+                UserTraining ut1 = new UserTraining(4, 1, 0);
                 userTrainingDao.insert(ut1);
-                UserTraining ut2 = new UserTraining(2, 5, 2, 12);
+                UserTraining ut2 = new UserTraining(5, 2, 12);
                 userTrainingDao.insert(ut2);
-                UserTraining ut3 = new UserTraining(3, 5, 3, 16);
+                UserTraining ut3 = new UserTraining(5, 3, 16);
                 userTrainingDao.insert(ut3);
             }
             return null;
