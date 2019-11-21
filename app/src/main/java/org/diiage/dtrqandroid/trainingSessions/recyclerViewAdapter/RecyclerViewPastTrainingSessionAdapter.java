@@ -32,11 +32,9 @@ public class RecyclerViewPastTrainingSessionAdapter extends RecyclerView.Adapter
     private Fragment fragment;
     private Context context;
     private Long userId;
-    private Consumer onClickButton;
     private FragmentPastTrainingSessionsListBinding binding;
 
-    public RecyclerViewPastTrainingSessionAdapter(Consumer<TrainingSessionWithUser> onClickButton, Fragment fragment, Context context, List<TrainingSessionWithUser> trainingSessions){
-        this.onClickButton = onClickButton;
+    public RecyclerViewPastTrainingSessionAdapter(Fragment fragment, Context context, List<TrainingSessionWithUser> trainingSessions){
         this.fragment = fragment;
         this.context = context;
         this.trainingSessionList = trainingSessions;
@@ -76,7 +74,6 @@ public class RecyclerViewPastTrainingSessionAdapter extends RecyclerView.Adapter
 
         public void bind(TrainingSessionWithUser trainingSession){
             fragmentPastTrainingSessionsListItemBinding.setTrainingSession(trainingSession);
-            fragmentPastTrainingSessionsListItemBinding.setConsumer(onClickButton);
             fragmentPastTrainingSessionsListItemBinding.executePendingBindings();
         }
     }

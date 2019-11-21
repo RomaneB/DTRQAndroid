@@ -8,13 +8,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import org.diiage.dtrqandroid.data.RoomApplication;
-import org.diiage.dtrqandroid.data.db.entity.TrainingSession;
-import org.diiage.dtrqandroid.data.db.entity.TrainingSessionWithUser;
 import org.diiage.dtrqandroid.data.db.viewmodel.TrainingSessionViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 import org.diiage.dtrqandroid.databinding.FragmentPastTrainingSessionsListBinding;
 import org.diiage.dtrqandroid.trainingSessions.recyclerViewAdapter.RecyclerViewPastTrainingSessionAdapter;
-import org.diiage.dtrqandroid.trainingSessions.recyclerViewAdapter.RecyclerViewTrainingSessionsAdapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModel;
@@ -74,26 +71,11 @@ public class PastTrainingSessionsListFragment extends Fragment {
 
         trainingSessionViewModel.getPastTrainingSessions(userId).observe(this, trainingSessions -> {
             if(trainingSessions != null){
-                RecyclerViewPastTrainingSessionAdapter adapter = new RecyclerViewPastTrainingSessionAdapter(this::onClickButton, this, this.getContext(), trainingSessions);
+                RecyclerViewPastTrainingSessionAdapter adapter = new RecyclerViewPastTrainingSessionAdapter(this, this.getContext(), trainingSessions);
                 recyclerView.setAdapter(adapter);
             }
         });
 
         return binding.getRoot();
-    }
-
-    private void onClickButton(TrainingSessionWithUser trainingSession)
-    {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Details")
-                .setMessage
-                        (
-                                "Date de la session : \n" +
-                                        trainingSession.date +
-                                        "\n\nScore : \n" +
-                                        trainingSession.score
-                        )
-                .setPositiveButton("Ok", (dialog, which) -> { });
-        builder.create().show();
     }
 }

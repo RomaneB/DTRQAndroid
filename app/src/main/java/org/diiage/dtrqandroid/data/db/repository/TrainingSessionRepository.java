@@ -23,6 +23,10 @@ public class TrainingSessionRepository {
         return trainingSessionDao.getAllTrainingSession();
     }
 
+    public LiveData<List<TrainingSession>> getAvailableTrainingSessions(){
+        return trainingSessionDao.getAvailableTrainingSessions();
+    }
+
     public LiveData<List<TrainingSessionWithUser>> getPastTrainingSessions(long userId){
         return trainingSessionDao.getPastTrainingSessions(userId);
     }

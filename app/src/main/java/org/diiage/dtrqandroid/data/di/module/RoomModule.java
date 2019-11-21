@@ -24,6 +24,7 @@ import org.diiage.dtrqandroid.data.db.viewmodel.CustomViewModelFactory;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.inject.Singleton;
@@ -246,6 +247,30 @@ public class RoomModule {
                     e.printStackTrace();
                 }
                 trainingSessionDao.insert(t3);
+
+                TrainingSession t4 = null;
+                try{
+                    t4 = new TrainingSession(4, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-12-15 14:00:00"), 5);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t4);
+
+                TrainingSession t5 = null;
+                try{
+                    t5 = new TrainingSession(5, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-12-15 14:00:00"), 5);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t5);
+
+                TrainingSession t6 = null;
+                try{
+                    t6 = new TrainingSession(6, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-25 16:00:00"), 5);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t6);
 
                 UserTraining ut1 = new UserTraining(1, 1, 1, 0);
                 userTrainingDao.insert(ut1);

@@ -15,13 +15,15 @@ public class TrainingSessionViewModel extends ViewModel {
     private TrainingSessionRepository trainingSessionRepository;
 
     public TrainingSessionViewModel(TrainingSessionRepository trainingSessionRepository) {
-
         this.trainingSessionRepository = trainingSessionRepository;
-
     }
 
     public LiveData<List<TrainingSession>> getAllTrainingSessions() {
         return trainingSessionRepository.getAllTrainingSessions();
+    }
+
+    public LiveData<List<TrainingSession>> getAvailableTrainingSessions(){
+        return trainingSessionRepository.getAvailableTrainingSessions();
     }
 
     public LiveData<List<TrainingSessionWithUser>> getPastTrainingSessions(long userId) {

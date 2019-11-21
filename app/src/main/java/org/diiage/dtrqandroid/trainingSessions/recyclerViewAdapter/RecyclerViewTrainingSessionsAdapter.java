@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 import org.diiage.dtrqandroid.data.db.entity.TrainingSession;
+import org.diiage.dtrqandroid.data.db.entity.TrainingSessionWithUser;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.db.viewmodel.TrainingSessionViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
@@ -28,6 +29,7 @@ import org.diiage.dtrqandroid.databinding.TrainingSessionsListItemBinding;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import javax.inject.Inject;
 
@@ -41,7 +43,7 @@ public class RecyclerViewTrainingSessionsAdapter extends RecyclerView.Adapter<Re
     private Context context;
     private Long userId;
 
-    public RecyclerViewTrainingSessionsAdapter(Fragment fragment, Context context, List<TrainingSession> data){
+    public RecyclerViewTrainingSessionsAdapter(Consumer<TrainingSession> onClockButton, Fragment fragment, Context context, List<TrainingSession> data){
         fragment = fragment;
         context = context;
         session = new UserSessionManager(context);
