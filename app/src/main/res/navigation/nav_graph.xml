@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginPage">
+
+    <fragment
+        android:id="@+id/driving_lessons_tabs_fragment"
+        android:name="org.diiage.dtrqandroid.drivingLessons.DrivingLessonsTabsFragment"
+        android:label="fragment_driving_lessons_tabs"
+        tools:layout="@layout/fragment_driving_lessons_tabs" />
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="org.diiage.dtrqandroid.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_drivingLessonsTabsFragment"
+            app:destination="@id/driving_lessons_tabs_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_trainingSessionsTabsFragment"
+            app:destination="@id/training_sessions_tabs_fragment" />
+        <action
+            android:id="@+id/btnLogout"
+            app:destination="@id/loginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/training_sessions_tabs_fragment"
+        android:name="org.diiage.dtrqandroid.trainingSessions.TrainingSessionsTabsFragment"
+        android:label="fragment_training_sessions_tabs"
+        tools:layout="@layout/fragment_training_sessions_tabs" />
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="org.diiage.dtrqandroid.data.view.LoginPage"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page" >
+        <action
+            android:id="@+id/action_loginPage_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
+</navigation>
