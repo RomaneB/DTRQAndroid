@@ -4,6 +4,7 @@ import org.diiage.dtrqandroid.data.db.dao.UserTrainingDao;
 import org.diiage.dtrqandroid.data.db.entity.UserTraining;
 
 import java.util.List;
+import java.util.concurrent.Executors;
 
 import javax.inject.Inject;
 
@@ -22,7 +23,13 @@ public class UserTrainingRepository {
         return userTrainingDao.getAllUserTrainings();
     }
 
-    public void insert(UserTraining userTraining) {
-        userTrainingDao.insert(userTraining);
+    public void insert(UserTraining userTraining)
+    {
+        Executors.newSingleThreadExecutor().execute(() -> userTrainingDao.insert(userTraining));
+    }
+
+
+    public void unregister(long trainingSessionId, long userId){
+        Executors.newSingleThreadExecutor().execute(() -> userTrainingDao.unregister(trainingSessionId,userId));
     }
 }

@@ -32,6 +32,11 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Mes leçons" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/training_sessions_tabs_title_lecons_passees" />
 
             </com.google.android.material.tabs.TabLayout>

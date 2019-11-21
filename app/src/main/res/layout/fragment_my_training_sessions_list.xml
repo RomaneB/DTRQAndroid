@@ -7,10 +7,9 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewNextDriving"
+            android:id="@+id/recyclerViewMyTrainingLessons"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/fragment_driving_lesson_item" />
-
+            tools:listitem="@layout/fragment_my_training_sessions_list_item"/>
     </LinearLayout>
 </layout>

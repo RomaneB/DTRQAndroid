@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
-            name="drivingLesson"
-            type="org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor" />
+            name="trainingSession"
+            type="org.diiage.dtrqandroid.data.db.entity.TrainingSessionWithUser" />
         <variable
             name="consumer"
             type="java.util.function.Consumer" />
@@ -16,8 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="20dip"
-        android:tag="layout/fragment_driving_lesson_list_item_0">
+        android:padding="20dip">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -26,7 +24,7 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_end="122dp"
+            app:layout_constraintGuide_percent="0.63"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,20 +44,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="31dp" />
+                    app:layout_constraintGuide_percent="0.5" />
 
                 <TextView
                     android:id="@+id/date_lesson"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="@{`Séance du ` + drivingLesson.date.toString()}"
+                    android:text="@{trainingSession.date.toString()}"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -68,11 +65,11 @@
                     app:layout_constraintVertical_bias="0.173" />
 
                 <TextView
-                    android:id="@+id/instructor_name"
+                    android:id="@+id/score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="17dp"
-                    android:text="@{`Avec ` + drivingLesson.firstName + ` ` + drivingLesson.lastName}"
+                    android:text="@{`Score : ` + Integer.toString(trainingSession.score) + `/ 10`}"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/date_lesson"
@@ -80,35 +77,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/btnRegister"
-                    android:layout_width="134dp"
-                    android:layout_height="48dp"
-                    android:layout_marginEnd="4dp"
-                    android:background="@android:color/holo_green_dark"
-                    android:onClick="@{() -> consumer.accept(drivingLesson)}"
-                    android:text="S'inscrire"
-                    android:textColor="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

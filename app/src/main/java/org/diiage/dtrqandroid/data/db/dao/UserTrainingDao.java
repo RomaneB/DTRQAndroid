@@ -16,4 +16,7 @@ public interface UserTrainingDao {
 
     @Insert
     void insert(UserTraining userTraining);
+
+    @Query("DELETE FROM USER_TRAINING WHERE trainingId=:trainingSessionId AND userId=:userId")
+    void unregister(long trainingSessionId, long userId);
 }

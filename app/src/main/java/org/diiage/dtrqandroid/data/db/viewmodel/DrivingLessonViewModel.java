@@ -18,7 +18,6 @@ public class DrivingLessonViewModel extends ViewModel {
 
     //private DrivingLesson drivingLesson;
 
-
     private DrivingLessonRepository drivingLessonRepository;
     private UserRepository userRepository;
     //private LiveData<String> userName;
@@ -48,6 +47,7 @@ private MutableLiveData<Long> userId = new MutableLiveData<>();
         //user = Transformations.switchMap(userId,userRepository::getById);
     }
 
+    public LiveData<List<DrivingLessonWithInstructor>> getPastDrivingLessons(long userId) { return drivingLessonRepository.getPastDrivingLessons(userId);}
     public LiveData<List<DrivingLesson>> getAllDrivingLessons() { return drivingLessonRepository.getAllDrivingLessons();}
     public LiveData<List<DrivingLessonWithInstructor>> getAvailableDrivingLessons(Long userId) { return drivingLessonRepository.getAvailableDrivingLessons(userId);}
     public LiveData<List<DrivingLessonWithInstructor>> getMyDrivingLessons(long userId) {
