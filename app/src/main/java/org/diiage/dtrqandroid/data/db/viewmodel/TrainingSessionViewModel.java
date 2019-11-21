@@ -24,4 +24,12 @@ public class TrainingSessionViewModel extends ViewModel {
     }
 
     public void insert(TrainingSession trainingSession) { trainingSessionRepository.insert(trainingSession);}
+
+    public LiveData<List<TrainingSession>> getTrainingSessionsByUserId(long userId) {
+        return trainingSessionRepository.getTrainingSessionsByUserId(userId);
+    }
+
+    public void updateAvailableSeats(long trainingSessionId){
+        trainingSessionRepository.updateAvailableSeats(trainingSessionId);
+    }
 }

@@ -9,15 +9,12 @@ import android.widget.Toast;
 
 import org.diiage.dtrqandroid.R;
 import org.diiage.dtrqandroid.data.RoomApplication;
-import org.diiage.dtrqandroid.data.db.entity.DrivingLesson;
 import org.diiage.dtrqandroid.data.db.entity.DrivingLessonWithInstructor;
 import org.diiage.dtrqandroid.data.db.viewmodel.DrivingLessonViewModel;
 import org.diiage.dtrqandroid.data.userManagement.UserSessionManager;
 import org.diiage.dtrqandroid.databinding.FragmentMyDrivingLessonsListBinding;
-import org.diiage.dtrqandroid.databinding.FragmentNextDrivingLessonsListBinding;
 import org.diiage.dtrqandroid.drivingLessons.recyclerViewAdapter.RecyclerViewMyDrivingLessonAdapter;
 
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.inject.Inject;
@@ -27,8 +24,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public class MyDrivingLessonsListFragment extends Fragment {
     @Inject
@@ -69,7 +64,6 @@ public class MyDrivingLessonsListFragment extends Fragment {
                     }
                 }
         );
-
     }
 
     @Override

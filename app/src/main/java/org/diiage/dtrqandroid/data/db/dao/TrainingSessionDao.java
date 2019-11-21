@@ -16,4 +16,10 @@ public interface TrainingSessionDao {
 
     @Insert
     void insert(TrainingSession trainingSession);
+
+    @Query("SELECT * FROM trainingsession JOIN user_training ON trainingSessionId=trainingId WHERE userId= :userId")
+    LiveData<List<TrainingSession>> getTrainingSessionByUserId(long userId);
+
+    @Query("UPDATE trainingsession SET availableSeat= availableSeat+1 WHERE trainingSessionId= :trainingSessionId")
+    void updateAvailableSeats(long trainingSessionId);
 }

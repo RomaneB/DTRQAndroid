@@ -4,6 +4,7 @@ import org.diiage.dtrqandroid.data.db.dao.TrainingSessionDao;
 import org.diiage.dtrqandroid.data.db.entity.TrainingSession;
 
 import java.util.List;
+import java.util.concurrent.Executors;
 
 import javax.inject.Inject;
 
@@ -24,5 +25,13 @@ public class TrainingSessionRepository {
 
     public void insert(TrainingSession trainingSession) {
         trainingSessionDao.insert(trainingSession);
+    }
+
+    public LiveData<List<TrainingSession>> getTrainingSessionsByUserId(long userId){
+        return trainingSessionDao.getTrainingSessionByUserId(userId);
+    }
+
+    public void updateAvailableSeats(long trainingSessionId){
+        Executors.newSingleThreadExecutor().execute(() -> trainingSessionDao.updateAvailableSeats(trainingSessionId));
     }
 }

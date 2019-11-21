@@ -21,4 +21,9 @@ public class UserTrainingViewModel extends ViewModel {
     LiveData<List<UserTraining>> getAllUserTrainings() { return userTrainingRepository.getAllUserTrainings();}
 
     public void insert(UserTraining userTraining) { userTrainingRepository.insert(userTraining);}
+
+
+    public void unregister(long trainingSessionId, long userId){
+        userTrainingRepository.unregister(trainingSessionId, userId);
+    }
 }

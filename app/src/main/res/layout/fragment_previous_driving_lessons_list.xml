@@ -13,7 +13,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewPastDriving"
                 android:layout_width="match_parent"
-                android:layout_height="443dp"
+                android:layout_height="match_parent"
                 tools:listitem="@layout/fragment_previous_driving_lessons_list_item" />
 
         </LinearLayout>

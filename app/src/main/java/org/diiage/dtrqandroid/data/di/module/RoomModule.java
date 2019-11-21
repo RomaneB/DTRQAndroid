@@ -243,7 +243,7 @@ public class RoomModule {
 
                 DrivingLesson d7 = null;
                 try {
-                    d7 = new DrivingLesson(7, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2020-02-10 10:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,0);
+                    d7 = new DrivingLesson(7, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2020-02-10 10:00:00"), "Driving de Patatana qu'il ne doit pas voir mais les autres oui", 2,4);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -265,7 +265,7 @@ public class RoomModule {
 
                 TrainingSession t1 = null;
                 try {
-                    t1 = new TrainingSession(1,  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-10-23 12:30:00"), 2);
+                    t1 = new TrainingSession(1,  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-12-23 12:30:00"), 2);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -285,15 +285,12 @@ public class RoomModule {
                 }
                 trainingSessionDao.insert(t3);
 
-                UserTraining ut1 = new UserTraining(1, 1, 1, 0);
+                UserTraining ut1 = new UserTraining(1, 4, 1, 0);
                 userTrainingDao.insert(ut1);
                 UserTraining ut2 = new UserTraining(2, 5, 2, 12);
                 userTrainingDao.insert(ut2);
                 UserTraining ut3 = new UserTraining(3, 5, 3, 16);
                 userTrainingDao.insert(ut3);
-
-
-
             }
             return null;
         }
