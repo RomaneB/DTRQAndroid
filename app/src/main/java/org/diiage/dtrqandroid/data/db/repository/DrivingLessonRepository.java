@@ -39,6 +39,11 @@ public class DrivingLessonRepository {
         return drivingLessonDao.getDrivingLessonById(drivingLessonId);
     }
 
+    // Step 2 : provide a live data object in the repository.
+    public LiveData<Long> countDrivingLessonsByUser(long userId) {
+        return drivingLessonDao.countDrivingLessonsByUser(userId);
+    }
+
     public void registrer(Long userId, Long drivingLessonId) {
         Executors.newSingleThreadExecutor().execute(() -> drivingLessonDao.registrer(userId, drivingLessonId));
     }

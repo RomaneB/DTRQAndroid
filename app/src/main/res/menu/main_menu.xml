@@ -7,6 +7,11 @@
     <item
         android:id="@+id/btn_training_sessions"
         android:title="Sessions d'entraînement" />
+    <!-- Step 5 : Create a button in this menu which will allow to see the new fragment. -->
+    <item
+        android:id="@+id/btn_evaluation"
+        android:title="@string/evaluation_title"
+        />
     <item
         android:id="@+id/btn_logout"
         android:title="Se déconnecter" />

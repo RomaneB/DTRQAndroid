@@ -20,16 +20,15 @@ public class DrivingLessonViewModel extends ViewModel {
 
     private DrivingLessonRepository drivingLessonRepository;
     private UserRepository userRepository;
-    //private LiveData<String> userName;
-    //private LiveData<User> user;
+
 
     private LiveData<Long> drivingLessonId;
     private LiveData<Date> dateDrivingLesson;
     private LiveData<String> descriptionDrivingLesson;
     private LiveData<DrivingLesson> drivingLesson;
     private LiveData<DrivingLessonWithInstructor> drivingLessonWithInstructor;
-    //private MutableLiveData<Long> drivingLessonId = new MutableLiveData<>();
-private MutableLiveData<Long> userId = new MutableLiveData<>();
+
+    private MutableLiveData<Long> userId = new MutableLiveData<>();
 
     public DrivingLessonViewModel () {
 }
@@ -75,4 +74,9 @@ private MutableLiveData<Long> userId = new MutableLiveData<>();
     public LiveData<Long> getDrivingLessonId(){
         return drivingLessonId;
     }
+
+    // Step 7 : Add a live data object into the view model.
+    public LiveData<Long> getEvalCount(Long userId) {
+        return drivingLessonRepository.countDrivingLessonsByUser(userId);
+    };
 }

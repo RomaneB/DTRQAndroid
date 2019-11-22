@@ -24,6 +24,9 @@
         <action
             android:id="@+id/btnLogout"
             app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_home_fragment_to_evaluationFragment"
+            app:destination="@id/evaluationFragment" />
     </fragment>
     <fragment
         android:id="@+id/training_sessions_tabs_fragment"
@@ -39,4 +42,11 @@
             android:id="@+id/action_loginPage_to_home_fragment"
             app:destination="@id/home_fragment" />
     </fragment>
+
+    <!-- Step 4 : Add the new fragment in the navigation graph. -->
+    <fragment
+        android:id="@+id/evaluationFragment"
+        android:name="org.diiage.dtrqandroid.drivingLessons.EvaluationFragment"
+        android:label="fragment_evaluation"
+        tools:layout="@layout/fragment_evaluation" />
 </navigation>

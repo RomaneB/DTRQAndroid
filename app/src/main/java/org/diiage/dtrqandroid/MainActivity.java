@@ -1,6 +1,7 @@
 package org.diiage.dtrqandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.os.Bundle;
@@ -47,8 +48,29 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_training_sessions:
                 Navigation.findNavController(findViewById(R.id.nav_host_fragment)).navigate(R.id.training_sessions_tabs_fragment);
                 return true;
+                // Step 6 : Navigate to evaluation fragment when the user click on the new button.
+            case R.id.btn_evaluation:
+                NavController navCtrl = Navigation.findNavController(findViewById(R.id.nav_host_fragment));
+
+                /*
+                  It allows me to prevent a "bad behavior" :
+                  The user is able to navigate between fragments with view pager but
+                  that is not the case when we navigate from a fragment with a view pager
+                  in it to another one without view pager. I don't understand why
+                  at this moment, if you an explanation for this, I am interested.
+
+                  I only found this : https://stackoverflow.com/a/55705293.
+                 */
+                if (navCtrl.getCurrentDestination().getId() != R.id.home_fragment)
+                {
+                    navCtrl.navigate(R.id.home_fragment);
+                }
+
+                navCtrl.navigate(R.id.action_home_fragment_to_evaluationFragment);
+                return true;
             case R.id.btn_logout:
                 session.logoutUser(MainActivity.this);
+
         }
 
         return super.onOptionsItemSelected(item);

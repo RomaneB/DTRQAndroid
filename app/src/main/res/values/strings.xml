@@ -9,4 +9,5 @@
     <string name="training_sessions_tabs_title_liste_des_lecons">Leçons de conduite</string>
     <string name="training_sessions_tabs_title_lecons_passees">Leçons passées</string>
     <string name="training_sessions_tabs_title_liste_session">Sessions d\'entraînement</string>
+    <string name="evaluation_title">EVALUATION PAGE</string>
 </resources>
