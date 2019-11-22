@@ -10,4 +10,8 @@
     <item
         android:id="@+id/btn_logout"
         android:title="Se déconnecter" />
+
+    <item
+        android:id="@+id/btn_nombre_lecons"
+        android:title="Nombre de lecons" />
 </menu>

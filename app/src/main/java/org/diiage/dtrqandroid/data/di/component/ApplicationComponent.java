@@ -8,6 +8,7 @@ import org.diiage.dtrqandroid.data.di.module.RoomModule;
 import org.diiage.dtrqandroid.data.view.LoginPage;
 import org.diiage.dtrqandroid.drivingLessons.MyDrivingLessonsListFragment;
 import org.diiage.dtrqandroid.drivingLessons.NextDrivingLessonsListFragment;
+import org.diiage.dtrqandroid.drivingLessons.NombreLessonsFragment;
 import org.diiage.dtrqandroid.drivingLessons.PreviousDrivingLessonsListFragment;
 import org.diiage.dtrqandroid.trainingSessions.MyTrainingSessionsListFragment;
 import org.diiage.dtrqandroid.trainingSessions.PastTrainingSessionsListFragment;
@@ -31,6 +32,7 @@ public interface ApplicationComponent {
     void inject (PreviousDrivingLessonsListFragment previousDrivingLessonsListFragment);
     void inject (MyTrainingSessionsListFragment myTrainingSessionsListFragment);
     void inject (PastTrainingSessionsListFragment pastTrainingSessionsListFragment);
+    void inject (NombreLessonsFragment nombreLessonsFragment);
 
     Application getApplication();
 

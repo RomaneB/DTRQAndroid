@@ -67,5 +67,6 @@ public class HomeFragment extends Fragment {
        view.findViewById(R.id.btnGoToDriving).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.driving_lessons_tabs_fragment));
 
         view.findViewById(R.id.btnGoToTraining).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.training_sessions_tabs_fragment));
+        view.findViewById(R.id.btnGoToNombreLecons).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.nombre_lessons_fragment));
     }
 }

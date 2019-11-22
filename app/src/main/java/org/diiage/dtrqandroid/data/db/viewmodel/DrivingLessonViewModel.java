@@ -53,6 +53,10 @@ private MutableLiveData<Long> userId = new MutableLiveData<>();
     public LiveData<List<DrivingLessonWithInstructor>> getMyDrivingLessons(long userId) {
         return drivingLessonRepository.getMyDrivingLessons(userId);
     }
+    public LiveData<Integer> getNombreMesLecons(long userId){
+        return drivingLessonRepository.getNombreMesLecons(userId);
+    }
+
     public LiveData<DrivingLesson> getDrivingLessonsById(long drivingLessonId) {
         return drivingLessonRepository.getDrivingLessonById(drivingLessonId);
     }

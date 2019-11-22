@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.btn_logout:
                 session.logoutUser(MainActivity.this);
+            case R.id.btn_nombre_lecons:
+                Navigation.findNavController(findViewById(R.id.nav_host_fragment)).navigate(R.id.nombre_lessons_fragment);
         }
 
         return super.onOptionsItemSelected(item);

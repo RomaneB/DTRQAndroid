@@ -32,6 +32,9 @@ public interface DrivingLessonDao {
     @Query("SELECT * FROM drivingLesson INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId WHERE userId = :userId AND date(datetime(date / 1000 , 'unixepoch')) > date('now') ORDER BY date")
     LiveData<List<DrivingLessonWithInstructor>> getMyDrivingLessons(long userId);
 
+    @Query("SELECT COUNT(*) FROM drivingLesson INNER JOIN instructor ON drivingLesson.instructorId = instructor.instructorId WHERE userId = :userId AND date(datetime(date / 1000 , 'unixepoch')) > date('now')")
+    LiveData<Integer> getNombreMesLecons(long userId);
+
     @Query("SELECT * FROM drivingLesson WHERE drivingLessonId = :drivingLessonId")
     LiveData<DrivingLesson> getDrivingLessonById(long drivingLessonId);
 
