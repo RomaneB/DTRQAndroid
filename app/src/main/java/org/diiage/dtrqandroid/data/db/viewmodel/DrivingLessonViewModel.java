@@ -26,6 +26,7 @@ public class DrivingLessonViewModel extends ViewModel {
     private LiveData<Long> drivingLessonId;
     private LiveData<Date> dateDrivingLesson;
     private LiveData<String> descriptionDrivingLesson;
+    private LiveData<Long> countDrivingLesson;
     private LiveData<DrivingLesson> drivingLesson;
     private LiveData<DrivingLessonWithInstructor> drivingLessonWithInstructor;
     //private MutableLiveData<Long> drivingLessonId = new MutableLiveData<>();
@@ -74,5 +75,9 @@ private MutableLiveData<Long> userId = new MutableLiveData<>();
     }
     public LiveData<Long> getDrivingLessonId(){
         return drivingLessonId;
+    }
+
+    public LiveData<Long> getCountDrivingLessonByUserId(long userId){
+        return drivingLessonRepository.getCountDrivingLessonByUserId(userId);
     }
 }

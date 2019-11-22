@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import org.diiage.dtrqandroid.R;
+import org.diiage.dtrqandroid.drivingLessons.EvalFragment;
 import org.diiage.dtrqandroid.drivingLessons.MyDrivingLessonsListFragment;
 import org.diiage.dtrqandroid.drivingLessons.NextDrivingLessonsListFragment;
 import org.diiage.dtrqandroid.drivingLessons.PreviousDrivingLessonsListFragment;
@@ -32,6 +33,7 @@ public class DrivingLessonsTabsFragmentPagerAdapter extends FragmentStatePagerAd
                 return new MyDrivingLessonsListFragment();
             case 2:
                 return new PreviousDrivingLessonsListFragment();
+
         }
     }
 
@@ -45,6 +47,8 @@ public class DrivingLessonsTabsFragmentPagerAdapter extends FragmentStatePagerAd
                 return this.context.getString(R.string.driving_lessons_tabs_title_mes_lecons);
             case 2:
                 return this.context.getString(R.string.driving_lessons_tabs_title_lecons_precedentes);
+
+
         }
     }
 

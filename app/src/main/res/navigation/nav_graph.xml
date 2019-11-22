@@ -24,6 +24,10 @@
         <action
             android:id="@+id/btnLogout"
             app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_home_fragment_to_evalFragment"
+            app:destination="@id/evalFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/training_sessions_tabs_fragment"
@@ -39,4 +43,9 @@
             android:id="@+id/action_loginPage_to_home_fragment"
             app:destination="@id/home_fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/evalFragment"
+        android:name="org.diiage.dtrqandroid.drivingLessons.EvalFragment"
+        android:label="EvalFragment"
+        tools:layout="@layout/fragment_eval_fragment" />
 </navigation>

@@ -46,4 +46,11 @@ public class DrivingLessonRepository {
     public void insert(DrivingLesson drivingLesson) {
         drivingLessonDao.insert(drivingLesson);
     }
+
+
+
+    public LiveData<Long> getCountDrivingLessonByUserId(long userId) {
+        return drivingLessonDao.getCountDrivingLessonByUserId(userId);
+    }
+
 }
