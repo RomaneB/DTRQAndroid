@@ -66,6 +66,9 @@ public class HomeFragment extends Fragment {
 
        view.findViewById(R.id.btnGoToDriving).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.driving_lessons_tabs_fragment));
 
-        view.findViewById(R.id.btnGoToTraining).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.training_sessions_tabs_fragment));
+       view.findViewById(R.id.btnGoToTraining).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.training_sessions_tabs_fragment));
+
+       //Add Button for display number of lessons in which I was registered
+       view.findViewById(R.id.btn_count_driving_lessons).setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.count_driving_lesson_page));
     }
 }

@@ -296,7 +296,7 @@ public class RoomModule {
 
                 TrainingSession t5 = null;
                 try{
-                    t5 = new TrainingSession(5, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-12-15 14:00:00"), 5);
+                    t5 = new TrainingSession(5, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-10-15 14:00:00"), 5);
                 } catch(ParseException e){
                     e.printStackTrace();
                 }
@@ -310,12 +310,52 @@ public class RoomModule {
                 }
                 trainingSessionDao.insert(t6);
 
+                TrainingSession t7 = null;
+                try{
+                    t7 = new TrainingSession(7, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-11-15 16:00:00"), 1);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t7);
+
+                TrainingSession t8 = null;
+                try{
+                    t8 = new TrainingSession(8, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-08-25 16:00:00"), 7);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t8);
+
+                TrainingSession t9 = null;
+                try{
+                    t9 = new TrainingSession(9, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2019-12-25 12:00:00"), 3);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t9);
+
+                TrainingSession t10 = null;
+                try{
+                    t10 = new TrainingSession(10, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2020-01-12 10:00:00"), 15);
+                } catch(ParseException e){
+                    e.printStackTrace();
+                }
+                trainingSessionDao.insert(t10);
+
                 UserTraining ut1 = new UserTraining(4, 1, 0);
                 userTrainingDao.insert(ut1);
                 UserTraining ut2 = new UserTraining(5, 2, 12);
                 userTrainingDao.insert(ut2);
                 UserTraining ut3 = new UserTraining(5, 3, 16);
                 userTrainingDao.insert(ut3);
+                UserTraining ut4 = new UserTraining(4, 5, 0);
+                userTrainingDao.insert(ut4);
+                UserTraining ut5 = new UserTraining(4, 6, 5);
+                userTrainingDao.insert(ut5);
+                UserTraining ut6 = new UserTraining(4, 7, 2);
+                userTrainingDao.insert(ut6);
+                UserTraining ut7 = new UserTraining(4, 8, 10);
+                userTrainingDao.insert(ut7);
             }
             return null;
         }

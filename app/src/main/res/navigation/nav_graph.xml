@@ -24,6 +24,9 @@
         <action
             android:id="@+id/btnLogout"
             app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_home_fragment_to_count_driving_lesson_page"
+            app:destination="@id/count_driving_lesson_page" />
     </fragment>
     <fragment
         android:id="@+id/training_sessions_tabs_fragment"
@@ -38,5 +41,12 @@
         <action
             android:id="@+id/action_loginPage_to_home_fragment"
             app:destination="@id/home_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/count_driving_lesson_page"
+        android:name="org.diiage.dtrqandroid.drivingLessons.CountDrivingLessonsFragment"
+        android:label="fragment_count_driving_lesson_page"
+        tools:layout="@layout/fragment_count_driving_lessons" >
     </fragment>
 </navigation>

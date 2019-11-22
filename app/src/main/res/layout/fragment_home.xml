@@ -35,6 +35,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGoToDriving" />
 
+    <Button
+        android:id="@+id/btn_count_driving_lessons"
+        android:layout_width="375dp"
+        android:layout_height="71dp"
+        android:text="Nombre de lessons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoToTraining" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="407dp"

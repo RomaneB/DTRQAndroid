@@ -75,4 +75,6 @@ private MutableLiveData<Long> userId = new MutableLiveData<>();
     public LiveData<Long> getDrivingLessonId(){
         return drivingLessonId;
     }
+
+    public LiveData<Long> getDrivingLessonCountByUserid(long userId){return drivingLessonRepository.getLessonCountByUserId(userId);}
 }
